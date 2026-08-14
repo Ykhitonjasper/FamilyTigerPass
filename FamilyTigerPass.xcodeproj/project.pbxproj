@@ -1,0 +1,743 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		03FDCC4012D4040FE5BB87B8 /* SettingsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C6C138E5848D6AE3F5DC38F /* SettingsScreen.swift */; };
+		1C948D1285232038219B2855 /* TreatBudgetCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCE58AB9F69FAC18EDFCC988 /* TreatBudgetCalculator.swift */; };
+		1CB3935868387597EAB74712 /* ExportScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD384228369AF8DF0358110 /* ExportScreen.swift */; };
+		1E5103BBC9822A0615E9102F /* ResultCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA8C02C7864F5E10F31ECA3 /* ResultCard.swift */; };
+		1EEA4F913029C22100743813 /* ProjectText.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01B797820196B3B35491C60 /* ProjectText.swift */; };
+		21BF141E728C64D71607482F /* Seed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CE394537EC6A151AF6471DB /* Seed.swift */; };
+		24F7DE5CB38C2A20A43816A1 /* ProjectPDF.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA104BA2BF61CF18C78C8C2F /* ProjectPDF.swift */; };
+		26C53B085FDE0D05814E9F08 /* AppTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA8ADA39052CCE74D76A001 /* AppTheme.swift */; };
+		27FB9C2806396235CD72301D /* CrateSizeCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2462A84E3C59BC7F3C9F53F /* CrateSizeCalculator.swift */; };
+		2C02A74552B453D6264E67AC /* BagDaysCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D08B21B8954753C4921773 /* BagDaysCalculator.swift */; };
+		2DB6452A4DC3C9C16CB98BEB /* AppBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FF45AF0C5C505D13FA61FCC /* AppBackground.swift */; };
+		2E8A64D5F4F81AECC298E4BA /* TreatBudgetScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D69BD28B7769B86CA93B10A /* TreatBudgetScreen.swift */; };
+		397F97C034B4DDA93D648B11 /* WalkWindowCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B3B750F20B3D3AD8C843F0 /* WalkWindowCalculator.swift */; };
+		3A3EEEB4C1920CABB3AF84D4 /* PresetChipRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94FB53267B4EAC46B5FC01AF /* PresetChipRow.swift */; };
+		3C8F81D0B52B64824FE684D7 /* ProjectDetailScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA2D87F47E6DF8DCF7C208EF /* ProjectDetailScreen.swift */; };
+		3F48160E63016F91DF7500CB /* Preset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FFFE835B904B1CF0C62F048 /* Preset.swift */; };
+		40EDC947EC4DA6336455C097 /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12BE3856E06A2D2315287B7C /* Project.swift */; };
+		4896510EBE6FA89BED678D68 /* HouseholdEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72610F75ADAC8B69B1DF2D8E /* HouseholdEnums.swift */; };
+		48CB06EACDA2F33EF56F154F /* FormBits.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7984534706D214C98FDD30D /* FormBits.swift */; };
+		4A7FCDCDA2352BF2BD06D441 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6B38EC5DAF908C17E67A1365 /* Assets.xcassets */; };
+		512745421EF00FDBFAA0B63C /* ToolsHubScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FC53177C837F709FD14FA1 /* ToolsHubScreen.swift */; };
+		527DBD66749486973459D651 /* WaterRefillCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE8CF5694D38F18AF6001BEE /* WaterRefillCalculator.swift */; };
+		5A6D7617CD29AFEF31511E2C /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F3ACCD594578BF291CE6F6F /* MainTabView.swift */; };
+		5C6A4A53C7BBD1D9D193C87A /* PresetCatalog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FFA6787D6D94A3EA773DF5A /* PresetCatalog.swift */; };
+		614395D51DB3108D62BA277E /* Legal.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4A322EBFFEE2477EE8C135A /* Legal.swift */; };
+		64C0B223C56EB087ECAC52E7 /* SaveLineItemSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD56199D1E278CFF96E941E /* SaveLineItemSheet.swift */; };
+		64C6C7602EC9DDF0F02A0063 /* BoardingPackScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C19E4C5BD97C1D9C67177F9 /* BoardingPackScreen.swift */; };
+		6A9EC9118FC1FE900C7A558A /* KcalBandCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7672DFC93F9A50CB7AAC4B72 /* KcalBandCalculator.swift */; };
+		6BA0ADFF7004AD9F8B402ECF /* LineItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFEC3AE21E368350C9215DDA /* LineItem.swift */; };
+		6F9E15B970B40FA4921D54B1 /* OnboardingScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98B4F4C4DABAA40EBA7B452 /* OnboardingScreen.swift */; };
+		750152E75BA49B2B4FC3694F /* TravelKitScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A49BC1175EE50DD78691AA8 /* TravelKitScreen.swift */; };
+		78BE617816197858013AB0A2 /* KcalBandScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED199CB5B5C378BFA6C67646 /* KcalBandScreen.swift */; };
+		902EDE0F91862A34C7DAA8E6 /* BowlSplitScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025B22800FCEE7BDBC629B9E /* BowlSplitScreen.swift */; };
+		9F04761995F83BCF2A614AA4 /* WalkWindowScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010309E771BDFED052A9EC21 /* WalkWindowScreen.swift */; };
+		A1FC7270526C1E58F726AD32 /* PadLitterBurnCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A11D3FBD8B24A4E5C6A2119 /* PadLitterBurnCalculator.swift */; };
+		A3E7F311C5692A69D06E2416 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6CCA08691305F42B48764B3 /* RootView.swift */; };
+		A4214EFD4638DAB9BC4D0884 /* WaterRefillScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793361BBAA004A03A5E9C81E /* WaterRefillScreen.swift */; };
+		A4BDFD2401EF7A26A908FB26 /* PadLitterBurnScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E109D83331557BE7A9DA84ED /* PadLitterBurnScreen.swift */; };
+		A63AFBD80483B57188C8A3C3 /* CrateSizeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D713098AC9B6CB07A575DA94 /* CrateSizeScreen.swift */; };
+		B66F7EE3E28242D5580186F9 /* CalculatorKind.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F2181D339492C603A4E78B7 /* CalculatorKind.swift */; };
+		B9942B091649822448059163 /* SmokeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEAF27CF215161B1647539D6 /* SmokeUITests.swift */; };
+		BE4B5CC4D7609221A88D443A /* ProjectsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 137A8AB2CB618D32688FA4F7 /* ProjectsScreen.swift */; };
+		C0B6EC461605F0167047E462 /* BowlSplitCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3BCD8B3A1F224E16A8D656F /* BowlSplitCalculator.swift */; };
+		C9CC06B3F61D383B0F890FF7 /* TravelKitCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E031D8FAB6BFDFBB7BB986D9 /* TravelKitCalculator.swift */; };
+		D5D4153BFF69FA9D32EF98A0 /* GlassBg.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533A0A0DFAEEFA7DF3EE5FB6 /* GlassBg.swift */; };
+		DB37E9E327EE138E7B34AC8F /* FamilyTigerPassApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B2F882395916D732527E55 /* FamilyTigerPassApp.swift */; };
+		E10EAE3F5CABAD7BB0EEC45F /* BagDaysScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A282872F416090655FEB2D /* BagDaysScreen.swift */; };
+		E15E6FF1F592A6D6F23ED378 /* ReferenceTables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3346F5D598CCFCE960E8F853 /* ReferenceTables.swift */; };
+		F5D7701C017869C9A8C08D28 /* CTAButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D02450C44A7D3C495B40C92 /* CTAButton.swift */; };
+		FEECB53778721DBC866B5570 /* BoardingPackCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3273182D67D4DC4A48427FBF /* BoardingPackCalculator.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		34A69EC001E15D210B6105D1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 43BF58900FA04F23D41AD2CB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 71ECBA862E4543A227DE7193;
+			remoteInfo = FamilyTigerPass;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		010309E771BDFED052A9EC21 /* WalkWindowScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkWindowScreen.swift; sourceTree = "<group>"; };
+		025B22800FCEE7BDBC629B9E /* BowlSplitScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BowlSplitScreen.swift; sourceTree = "<group>"; };
+		0FA8ADA39052CCE74D76A001 /* AppTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTheme.swift; sourceTree = "<group>"; };
+		12BE3856E06A2D2315287B7C /* Project.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Project.swift; sourceTree = "<group>"; };
+		137A8AB2CB618D32688FA4F7 /* ProjectsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsScreen.swift; sourceTree = "<group>"; };
+		17FC53177C837F709FD14FA1 /* ToolsHubScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolsHubScreen.swift; sourceTree = "<group>"; };
+		1F2181D339492C603A4E78B7 /* CalculatorKind.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorKind.swift; sourceTree = "<group>"; };
+		2A49BC1175EE50DD78691AA8 /* TravelKitScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelKitScreen.swift; sourceTree = "<group>"; };
+		2C6C138E5848D6AE3F5DC38F /* SettingsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsScreen.swift; sourceTree = "<group>"; };
+		2FFFE835B904B1CF0C62F048 /* Preset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preset.swift; sourceTree = "<group>"; };
+		3273182D67D4DC4A48427FBF /* BoardingPackCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardingPackCalculator.swift; sourceTree = "<group>"; };
+		3346F5D598CCFCE960E8F853 /* ReferenceTables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReferenceTables.swift; sourceTree = "<group>"; };
+		3CE394537EC6A151AF6471DB /* Seed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Seed.swift; sourceTree = "<group>"; };
+		3D69BD28B7769B86CA93B10A /* TreatBudgetScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreatBudgetScreen.swift; sourceTree = "<group>"; };
+		4212E9158D4275647747F7FA /* FamilyTigerPassUITests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = FamilyTigerPassUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		533A0A0DFAEEFA7DF3EE5FB6 /* GlassBg.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlassBg.swift; sourceTree = "<group>"; };
+		5F3ACCD594578BF291CE6F6F /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
+		6A11D3FBD8B24A4E5C6A2119 /* PadLitterBurnCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PadLitterBurnCalculator.swift; sourceTree = "<group>"; };
+		6AA8C02C7864F5E10F31ECA3 /* ResultCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultCard.swift; sourceTree = "<group>"; };
+		6B38EC5DAF908C17E67A1365 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6FF45AF0C5C505D13FA61FCC /* AppBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppBackground.swift; sourceTree = "<group>"; };
+		72610F75ADAC8B69B1DF2D8E /* HouseholdEnums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HouseholdEnums.swift; sourceTree = "<group>"; };
+		7672DFC93F9A50CB7AAC4B72 /* KcalBandCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KcalBandCalculator.swift; sourceTree = "<group>"; };
+		793361BBAA004A03A5E9C81E /* WaterRefillScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterRefillScreen.swift; sourceTree = "<group>"; };
+		7BD384228369AF8DF0358110 /* ExportScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExportScreen.swift; sourceTree = "<group>"; };
+		8AD56199D1E278CFF96E941E /* SaveLineItemSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveLineItemSheet.swift; sourceTree = "<group>"; };
+		8C19E4C5BD97C1D9C67177F9 /* BoardingPackScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardingPackScreen.swift; sourceTree = "<group>"; };
+		8D02450C44A7D3C495B40C92 /* CTAButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CTAButton.swift; sourceTree = "<group>"; };
+		91D08B21B8954753C4921773 /* BagDaysCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BagDaysCalculator.swift; sourceTree = "<group>"; };
+		94FB53267B4EAC46B5FC01AF /* PresetChipRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresetChipRow.swift; sourceTree = "<group>"; };
+		95B3B750F20B3D3AD8C843F0 /* WalkWindowCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkWindowCalculator.swift; sourceTree = "<group>"; };
+		98B2F882395916D732527E55 /* FamilyTigerPassApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyTigerPassApp.swift; sourceTree = "<group>"; };
+		9FFA6787D6D94A3EA773DF5A /* PresetCatalog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresetCatalog.swift; sourceTree = "<group>"; };
+		AE8CF5694D38F18AF6001BEE /* WaterRefillCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterRefillCalculator.swift; sourceTree = "<group>"; };
+		B17B74C31BD399DE4838B652 /* FamilyTigerPass.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = FamilyTigerPass.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B6CCA08691305F42B48764B3 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		B98B4F4C4DABAA40EBA7B452 /* OnboardingScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingScreen.swift; sourceTree = "<group>"; };
+		BA2D87F47E6DF8DCF7C208EF /* ProjectDetailScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectDetailScreen.swift; sourceTree = "<group>"; };
+		C2462A84E3C59BC7F3C9F53F /* CrateSizeCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrateSizeCalculator.swift; sourceTree = "<group>"; };
+		D0A282872F416090655FEB2D /* BagDaysScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BagDaysScreen.swift; sourceTree = "<group>"; };
+		D3BCD8B3A1F224E16A8D656F /* BowlSplitCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BowlSplitCalculator.swift; sourceTree = "<group>"; };
+		D4A322EBFFEE2477EE8C135A /* Legal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Legal.swift; sourceTree = "<group>"; };
+		D713098AC9B6CB07A575DA94 /* CrateSizeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrateSizeScreen.swift; sourceTree = "<group>"; };
+		DA104BA2BF61CF18C78C8C2F /* ProjectPDF.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectPDF.swift; sourceTree = "<group>"; };
+		DCE58AB9F69FAC18EDFCC988 /* TreatBudgetCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreatBudgetCalculator.swift; sourceTree = "<group>"; };
+		E031D8FAB6BFDFBB7BB986D9 /* TravelKitCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelKitCalculator.swift; sourceTree = "<group>"; };
+		E109D83331557BE7A9DA84ED /* PadLitterBurnScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PadLitterBurnScreen.swift; sourceTree = "<group>"; };
+		ED199CB5B5C378BFA6C67646 /* KcalBandScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KcalBandScreen.swift; sourceTree = "<group>"; };
+		F01B797820196B3B35491C60 /* ProjectText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectText.swift; sourceTree = "<group>"; };
+		F7984534706D214C98FDD30D /* FormBits.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormBits.swift; sourceTree = "<group>"; };
+		FEAF27CF215161B1647539D6 /* SmokeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmokeUITests.swift; sourceTree = "<group>"; };
+		FFEC3AE21E368350C9215DDA /* LineItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineItem.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		0F907461132F4366CA78DDDD /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				B98B4F4C4DABAA40EBA7B452 /* OnboardingScreen.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		23025D89E0C80B6F2A74BA13 /* Calculators */ = {
+			isa = PBXGroup;
+			children = (
+				91D08B21B8954753C4921773 /* BagDaysCalculator.swift */,
+				3273182D67D4DC4A48427FBF /* BoardingPackCalculator.swift */,
+				D3BCD8B3A1F224E16A8D656F /* BowlSplitCalculator.swift */,
+				C2462A84E3C59BC7F3C9F53F /* CrateSizeCalculator.swift */,
+				7672DFC93F9A50CB7AAC4B72 /* KcalBandCalculator.swift */,
+				6A11D3FBD8B24A4E5C6A2119 /* PadLitterBurnCalculator.swift */,
+				E031D8FAB6BFDFBB7BB986D9 /* TravelKitCalculator.swift */,
+				DCE58AB9F69FAC18EDFCC988 /* TreatBudgetCalculator.swift */,
+				95B3B750F20B3D3AD8C843F0 /* WalkWindowCalculator.swift */,
+				AE8CF5694D38F18AF6001BEE /* WaterRefillCalculator.swift */,
+			);
+			path = Calculators;
+			sourceTree = "<group>";
+		};
+		3FD99E3E2CC428C3960771E4 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				B958E147B131CEB7FAB8101D /* Export */,
+				0F907461132F4366CA78DDDD /* Onboarding */,
+				F68C366739B1A4D15519B097 /* Projects */,
+				92BC53F0F97690AFCB682951 /* Settings */,
+				7CB1A0AB6E386882E8D625DC /* Tools */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		713C917486491DB0FA808433 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B17B74C31BD399DE4838B652 /* FamilyTigerPass.app */,
+				4212E9158D4275647747F7FA /* FamilyTigerPassUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7CB1A0AB6E386882E8D625DC /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				D0A282872F416090655FEB2D /* BagDaysScreen.swift */,
+				8C19E4C5BD97C1D9C67177F9 /* BoardingPackScreen.swift */,
+				025B22800FCEE7BDBC629B9E /* BowlSplitScreen.swift */,
+				D713098AC9B6CB07A575DA94 /* CrateSizeScreen.swift */,
+				ED199CB5B5C378BFA6C67646 /* KcalBandScreen.swift */,
+				E109D83331557BE7A9DA84ED /* PadLitterBurnScreen.swift */,
+				17FC53177C837F709FD14FA1 /* ToolsHubScreen.swift */,
+				2A49BC1175EE50DD78691AA8 /* TravelKitScreen.swift */,
+				3D69BD28B7769B86CA93B10A /* TreatBudgetScreen.swift */,
+				010309E771BDFED052A9EC21 /* WalkWindowScreen.swift */,
+				793361BBAA004A03A5E9C81E /* WaterRefillScreen.swift */,
+				23025D89E0C80B6F2A74BA13 /* Calculators */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		801A0A30ECF4684C5B431DC0 = {
+			isa = PBXGroup;
+			children = (
+				DEF1141CD894D3E51EBA3BDB /* FamilyTigerPass */,
+				801EFCA55028E8F4755D20A8 /* FamilyTigerPassUITests */,
+				713C917486491DB0FA808433 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		801EFCA55028E8F4755D20A8 /* FamilyTigerPassUITests */ = {
+			isa = PBXGroup;
+			children = (
+				FEAF27CF215161B1647539D6 /* SmokeUITests.swift */,
+			);
+			path = FamilyTigerPassUITests;
+			sourceTree = "<group>";
+		};
+		80F061A752316E48B0603AC5 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1F2181D339492C603A4E78B7 /* CalculatorKind.swift */,
+				72610F75ADAC8B69B1DF2D8E /* HouseholdEnums.swift */,
+				FFEC3AE21E368350C9215DDA /* LineItem.swift */,
+				2FFFE835B904B1CF0C62F048 /* Preset.swift */,
+				12BE3856E06A2D2315287B7C /* Project.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		92BC53F0F97690AFCB682951 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				2C6C138E5848D6AE3F5DC38F /* SettingsScreen.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		B958E147B131CEB7FAB8101D /* Export */ = {
+			isa = PBXGroup;
+			children = (
+				7BD384228369AF8DF0358110 /* ExportScreen.swift */,
+				DA104BA2BF61CF18C78C8C2F /* ProjectPDF.swift */,
+				F01B797820196B3B35491C60 /* ProjectText.swift */,
+			);
+			path = Export;
+			sourceTree = "<group>";
+		};
+		BEF94AF6B6E26E32D8D1731E /* Theme */ = {
+			isa = PBXGroup;
+			children = (
+				6FF45AF0C5C505D13FA61FCC /* AppBackground.swift */,
+				0FA8ADA39052CCE74D76A001 /* AppTheme.swift */,
+			);
+			path = Theme;
+			sourceTree = "<group>";
+		};
+		C5F24EF38F096676A05237CA /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				8D02450C44A7D3C495B40C92 /* CTAButton.swift */,
+				F7984534706D214C98FDD30D /* FormBits.swift */,
+				533A0A0DFAEEFA7DF3EE5FB6 /* GlassBg.swift */,
+				94FB53267B4EAC46B5FC01AF /* PresetChipRow.swift */,
+				6AA8C02C7864F5E10F31ECA3 /* ResultCard.swift */,
+				8AD56199D1E278CFF96E941E /* SaveLineItemSheet.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		CC5A4748F84D5A891C30803F /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				9FFA6787D6D94A3EA773DF5A /* PresetCatalog.swift */,
+				3346F5D598CCFCE960E8F853 /* ReferenceTables.swift */,
+				3CE394537EC6A151AF6471DB /* Seed.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		DEF1141CD894D3E51EBA3BDB /* FamilyTigerPass */ = {
+			isa = PBXGroup;
+			children = (
+				6B38EC5DAF908C17E67A1365 /* Assets.xcassets */,
+				98B2F882395916D732527E55 /* FamilyTigerPassApp.swift */,
+				D4A322EBFFEE2477EE8C135A /* Legal.swift */,
+				F6AC05653499DFEFE603943F /* App */,
+				CC5A4748F84D5A891C30803F /* Data */,
+				3FD99E3E2CC428C3960771E4 /* Features */,
+				80F061A752316E48B0603AC5 /* Models */,
+				C5F24EF38F096676A05237CA /* Shared */,
+				BEF94AF6B6E26E32D8D1731E /* Theme */,
+			);
+			path = FamilyTigerPass;
+			sourceTree = "<group>";
+		};
+		F68C366739B1A4D15519B097 /* Projects */ = {
+			isa = PBXGroup;
+			children = (
+				BA2D87F47E6DF8DCF7C208EF /* ProjectDetailScreen.swift */,
+				137A8AB2CB618D32688FA4F7 /* ProjectsScreen.swift */,
+			);
+			path = Projects;
+			sourceTree = "<group>";
+		};
+		F6AC05653499DFEFE603943F /* App */ = {
+			isa = PBXGroup;
+			children = (
+				5F3ACCD594578BF291CE6F6F /* MainTabView.swift */,
+				B6CCA08691305F42B48764B3 /* RootView.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0A1F66F2AE8FA70B911B04B4 /* FamilyTigerPassUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B6A6E1AA2168744207BC4D6B /* Build configuration list for PBXNativeTarget "FamilyTigerPassUITests" */;
+			buildPhases = (
+				006064CE22264E2EE6CFE12B /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8FD59D1730934687B9686612 /* PBXTargetDependency */,
+			);
+			name = FamilyTigerPassUITests;
+			packageProductDependencies = (
+			);
+			productName = FamilyTigerPassUITests;
+			productReference = 4212E9158D4275647747F7FA /* FamilyTigerPassUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		71ECBA862E4543A227DE7193 /* FamilyTigerPass */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BF03C4B029A04DE952DDF9DC /* Build configuration list for PBXNativeTarget "FamilyTigerPass" */;
+			buildPhases = (
+				2AC13DB24FE8EAEE6FAEB36D /* Sources */,
+				256BF3628B09527956694BA7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FamilyTigerPass;
+			packageProductDependencies = (
+			);
+			productName = FamilyTigerPass;
+			productReference = B17B74C31BD399DE4838B652 /* FamilyTigerPass.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		43BF58900FA04F23D41AD2CB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					0A1F66F2AE8FA70B911B04B4 = {
+						DevelopmentTeam = 33H8GRP43D;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 71ECBA862E4543A227DE7193;
+					};
+					71ECBA862E4543A227DE7193 = {
+						DevelopmentTeam = 33H8GRP43D;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = A4DABC9632DE9280186BCD5C /* Build configuration list for PBXProject "FamilyTigerPass" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = 801A0A30ECF4684C5B431DC0;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 713C917486491DB0FA808433 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				71ECBA862E4543A227DE7193 /* FamilyTigerPass */,
+				0A1F66F2AE8FA70B911B04B4 /* FamilyTigerPassUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		256BF3628B09527956694BA7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4A7FCDCDA2352BF2BD06D441 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		006064CE22264E2EE6CFE12B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B9942B091649822448059163 /* SmokeUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2AC13DB24FE8EAEE6FAEB36D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2DB6452A4DC3C9C16CB98BEB /* AppBackground.swift in Sources */,
+				26C53B085FDE0D05814E9F08 /* AppTheme.swift in Sources */,
+				2C02A74552B453D6264E67AC /* BagDaysCalculator.swift in Sources */,
+				E10EAE3F5CABAD7BB0EEC45F /* BagDaysScreen.swift in Sources */,
+				FEECB53778721DBC866B5570 /* BoardingPackCalculator.swift in Sources */,
+				64C6C7602EC9DDF0F02A0063 /* BoardingPackScreen.swift in Sources */,
+				C0B6EC461605F0167047E462 /* BowlSplitCalculator.swift in Sources */,
+				902EDE0F91862A34C7DAA8E6 /* BowlSplitScreen.swift in Sources */,
+				F5D7701C017869C9A8C08D28 /* CTAButton.swift in Sources */,
+				B66F7EE3E28242D5580186F9 /* CalculatorKind.swift in Sources */,
+				27FB9C2806396235CD72301D /* CrateSizeCalculator.swift in Sources */,
+				A63AFBD80483B57188C8A3C3 /* CrateSizeScreen.swift in Sources */,
+				1CB3935868387597EAB74712 /* ExportScreen.swift in Sources */,
+				DB37E9E327EE138E7B34AC8F /* FamilyTigerPassApp.swift in Sources */,
+				48CB06EACDA2F33EF56F154F /* FormBits.swift in Sources */,
+				D5D4153BFF69FA9D32EF98A0 /* GlassBg.swift in Sources */,
+				4896510EBE6FA89BED678D68 /* HouseholdEnums.swift in Sources */,
+				6A9EC9118FC1FE900C7A558A /* KcalBandCalculator.swift in Sources */,
+				78BE617816197858013AB0A2 /* KcalBandScreen.swift in Sources */,
+				614395D51DB3108D62BA277E /* Legal.swift in Sources */,
+				6BA0ADFF7004AD9F8B402ECF /* LineItem.swift in Sources */,
+				5A6D7617CD29AFEF31511E2C /* MainTabView.swift in Sources */,
+				6F9E15B970B40FA4921D54B1 /* OnboardingScreen.swift in Sources */,
+				A1FC7270526C1E58F726AD32 /* PadLitterBurnCalculator.swift in Sources */,
+				A4BDFD2401EF7A26A908FB26 /* PadLitterBurnScreen.swift in Sources */,
+				3F48160E63016F91DF7500CB /* Preset.swift in Sources */,
+				5C6A4A53C7BBD1D9D193C87A /* PresetCatalog.swift in Sources */,
+				3A3EEEB4C1920CABB3AF84D4 /* PresetChipRow.swift in Sources */,
+				40EDC947EC4DA6336455C097 /* Project.swift in Sources */,
+				3C8F81D0B52B64824FE684D7 /* ProjectDetailScreen.swift in Sources */,
+				24F7DE5CB38C2A20A43816A1 /* ProjectPDF.swift in Sources */,
+				1EEA4F913029C22100743813 /* ProjectText.swift in Sources */,
+				BE4B5CC4D7609221A88D443A /* ProjectsScreen.swift in Sources */,
+				E15E6FF1F592A6D6F23ED378 /* ReferenceTables.swift in Sources */,
+				1E5103BBC9822A0615E9102F /* ResultCard.swift in Sources */,
+				A3E7F311C5692A69D06E2416 /* RootView.swift in Sources */,
+				64C0B223C56EB087ECAC52E7 /* SaveLineItemSheet.swift in Sources */,
+				21BF141E728C64D71607482F /* Seed.swift in Sources */,
+				03FDCC4012D4040FE5BB87B8 /* SettingsScreen.swift in Sources */,
+				512745421EF00FDBFAA0B63C /* ToolsHubScreen.swift in Sources */,
+				C9CC06B3F61D383B0F890FF7 /* TravelKitCalculator.swift in Sources */,
+				750152E75BA49B2B4FC3694F /* TravelKitScreen.swift in Sources */,
+				1C948D1285232038219B2855 /* TreatBudgetCalculator.swift in Sources */,
+				2E8A64D5F4F81AECC298E4BA /* TreatBudgetScreen.swift in Sources */,
+				397F97C034B4DDA93D648B11 /* WalkWindowCalculator.swift in Sources */,
+				9F04761995F83BCF2A614AA4 /* WalkWindowScreen.swift in Sources */,
+				527DBD66749486973459D651 /* WaterRefillCalculator.swift in Sources */,
+				A4214EFD4638DAB9BC4D0884 /* WaterRefillScreen.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8FD59D1730934687B9686612 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 71ECBA862E4543A227DE7193 /* FamilyTigerPass */;
+			targetProxy = 34A69EC001E15D210B6105D1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		47471E3690AA8FDEF6685221 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_ENTITLEMENTS = "";
+				DEVELOPMENT_TEAM = 33H8GRP43D;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.TuyetMaiDoThi.FamilyTigerPass.uitests;
+				PRODUCT_MODULE_NAME = FamilyTigerPassUITests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = FamilyTigerPass;
+			};
+			name = Debug;
+		};
+		5B35AE54F7D70B7487A66DE9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 33H8GRP43D;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = FamilyTigerPass/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.TuyetMaiDoThi.FamilyTigerPass;
+				PRODUCT_NAME = FamilyTigerPass;
+				SDKROOT = iphoneos;
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.9;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		628D0C44447428F3E94A663B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_ENTITLEMENTS = "";
+				DEVELOPMENT_TEAM = 33H8GRP43D;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.TuyetMaiDoThi.FamilyTigerPass.uitests;
+				PRODUCT_MODULE_NAME = FamilyTigerPassUITests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = FamilyTigerPass;
+			};
+			name = Release;
+		};
+		CB942BE3E4E058F4EC8BE659 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 33H8GRP43D;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = FamilyTigerPass/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.TuyetMaiDoThi.FamilyTigerPass;
+				PRODUCT_NAME = FamilyTigerPass;
+				SDKROOT = iphoneos;
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.9;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		D47A62914800697344C9D551 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Config/FamilyTigerPass.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = 33H8GRP43D;
+				INFOPLIST_FILE = FamilyTigerPass/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Family Tiger Pass";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.TuyetMaiDoThi.FamilyTigerPass;
+				PRODUCT_DISPLAY_NAME = "Family Tiger Pass";
+				SDKROOT = iphoneos;
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		EC86DE91089CD6F03CBB573F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Config/FamilyTigerPass.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = 33H8GRP43D;
+				INFOPLIST_FILE = FamilyTigerPass/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Family Tiger Pass";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.TuyetMaiDoThi.FamilyTigerPass;
+				PRODUCT_DISPLAY_NAME = "Family Tiger Pass";
+				SDKROOT = iphoneos;
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A4DABC9632DE9280186BCD5C /* Build configuration list for PBXProject "FamilyTigerPass" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5B35AE54F7D70B7487A66DE9 /* Debug */,
+				CB942BE3E4E058F4EC8BE659 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		B6A6E1AA2168744207BC4D6B /* Build configuration list for PBXNativeTarget "FamilyTigerPassUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				47471E3690AA8FDEF6685221 /* Debug */,
+				628D0C44447428F3E94A663B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		BF03C4B029A04DE952DDF9DC /* Build configuration list for PBXNativeTarget "FamilyTigerPass" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D47A62914800697344C9D551 /* Debug */,
+				EC86DE91089CD6F03CBB573F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 43BF58900FA04F23D41AD2CB /* Project object */;
+}
