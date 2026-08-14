@@ -85,5 +85,10 @@ workflows:
       - build/ios/ipa/*.ipa
       - /tmp/xcodebuild_logs/*.log
 
-    # Do NOT add publishing.app_store_connect here.
-    # No submit_to_app_store / no auto screenshots / no version copy push.
+    publishing:
+      app_store_connect:
+        api_key: $APP_STORE_CONNECT_PRIVATE_KEY
+        key_id: $APP_STORE_CONNECT_KEY_IDENTIFIER
+        issuer_id: $APP_STORE_CONNECT_ISSUER_ID
+        submit_to_app_store: false
+        # IPA goes to ASC; you pick the build on the version. No review submit, no listing copy.
