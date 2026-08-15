@@ -18,6 +18,13 @@ struct SettingsScreen: View {
                     .font(.footnote)
                     .foregroundStyle(AppTheme.textSecondary)
             }
+            Section("On this phone") {
+                LabeledContent("Projects", value: "\(projects.count)")
+                LabeledContent("Saved results", value: "\(savedCount)")
+                Text("Lion Kitchen and Weekend Cabin load on first launch so Export is already full.")
+                    .font(.footnote)
+                    .foregroundStyle(AppTheme.textSecondary)
+            }
             Section("Legal") {
                 Button("Privacy") {
                     if let url = Legal.privacy { openURL(url) }
@@ -35,6 +42,7 @@ struct SettingsScreen: View {
         .scrollContentBackground(.hidden)
         .background(AppBackground())
         .navigationTitle("Settings")
+        .kitchenChrome()
         .sensoryFeedback(.warning, trigger: deletePulse)
         .confirmationDialog("Delete all projects and results?", isPresented: $confirmDelete, titleVisibility: .visible) {
             Button("Delete All Data", role: .destructive) {
@@ -48,10 +56,15 @@ struct SettingsScreen: View {
         (Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String) ?? "1.0.0"
     }
 
+    private var savedCount: Int {
+        projects.reduce(0) { $0 + $1.lineItems.count }
+    }
+
     private func wipe() {
         for project in projects {
             modelContext.delete(project)
         }
+        try? modelContext.save()
         deletePulse.toggle()
         hasCompletedOnboarding = false
     }

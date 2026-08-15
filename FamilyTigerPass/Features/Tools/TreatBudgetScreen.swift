@@ -5,9 +5,7 @@ struct TreatBudgetScreen: View {
     @State private var dailyKcal = 1100.0
     @State private var treatPercentCap = 18.0
     @State private var kcalPerGram = 3.5
-    @State private var output: TreatBudgetCalculator.Output?
-    @State private var showSave = false
-    @State private var computePulse = false
+    @State private var saveDraft: SaveDraft?
 
     var body: some View {
         ScrollView {
@@ -21,7 +19,6 @@ struct TreatBudgetScreen: View {
                         ForEach(FoodDensity.rows) { row in
                             Button {
                                 kcalPerGram = row.kcalPerGram
-                                output = nil
                             } label: {
                                 Text(row.name)
                                     .font(.caption)
@@ -41,31 +38,21 @@ struct TreatBudgetScreen: View {
                 Text(ToolHelp.text(for: .treatBudget))
                     .font(.footnote)
                     .foregroundStyle(AppTheme.textSecondary)
-                CTAButton(title: "Compute") { compute() }
-                if let output {
-                    ResultCard(title: CalculatorKind.treatBudget.title, rows: TreatBudgetCalculator.rows(output))
-                    CTAButton(title: "Save to project", kind: .secondary) { showSave = true }
-                }
+                ResultCard(
+                    title: CalculatorKind.treatBudget.title,
+                    rows: TreatBudgetCalculator.rows(output),
+                    takeaway: TreatBudgetCalculator.summary(output)
+                )
+                CTAButton(title: "Save to project") { offerSave() }
             }
             .padding()
         }
         .background(AppBackground())
         .navigationTitle(CalculatorKind.treatBudget.title)
-        .sensoryFeedback(.impact, trigger: computePulse)
-        .sheet(isPresented: $showSave) {
-            if let output {
-                SaveLineItemSheet(
-                    kind: .treatBudget,
-                    summary: TreatBudgetCalculator.summary(output),
-                    detailJSON: TreatBudgetCalculator.snapshot(input, output)
-                )
-            }
-        }
+        .toolWorkbench()
+        .saveToProject(draft: $saveDraft)
         .task {
-            if let prefillJSON {
-                applyJSON(prefillJSON)
-                compute()
-            }
+            if let prefillJSON { applyJSON(prefillJSON) }
         }
     }
 
@@ -73,9 +60,15 @@ struct TreatBudgetScreen: View {
         TreatBudgetCalculator.Input(dailyKcal: dailyKcal, treatPercentCap: treatPercentCap, kcalPerGram: kcalPerGram)
     }
 
-    private func compute() {
-        output = TreatBudgetCalculator.compute(input)
-        computePulse.toggle()
+    private var output: TreatBudgetCalculator.Output { TreatBudgetCalculator.compute(input) }
+
+    private func offerSave() {
+        KeyboardChrome.dismiss()
+        saveDraft = SaveDraft(
+            kind: .treatBudget,
+            summary: TreatBudgetCalculator.summary(output),
+            detailJSON: TreatBudgetCalculator.snapshot(input, output)
+        )
     }
 
     private func apply(_ preset: Preset) { applyJSON(preset.detailJSON) }
@@ -85,7 +78,6 @@ struct TreatBudgetScreen: View {
         dailyKcal = decoded.dailyKcal
         treatPercentCap = decoded.treatPercentCap
         kcalPerGram = decoded.kcalPerGram
-        output = nil
     }
 }
 

@@ -21,6 +21,14 @@ enum LifeStage: String, Codable, StringRawPickable {
         case .senior: return "Senior"
         }
     }
+
+    var chip: String {
+        switch self {
+        case .puppyKitten: return "Young"
+        case .adult: return "Adult"
+        case .senior: return "Senior"
+        }
+    }
 }
 
 enum BCSBand: String, Codable, StringRawPickable {

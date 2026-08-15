@@ -49,6 +49,29 @@ struct DecimalField: View {
     }
 }
 
+struct ElevatedCard<Content: View>: View {
+    @ViewBuilder var content: Content
+
+    var body: some View {
+        content
+            .padding(14)
+            .frame(maxWidth: .infinity, alignment: .leading)
+            .background(AppTheme.bgElevated, in: RoundedRectangle(cornerRadius: 16, style: .continuous))
+            .overlay(
+                RoundedRectangle(cornerRadius: 16, style: .continuous)
+                    .stroke(AppTheme.hairline, lineWidth: 1)
+            )
+    }
+}
+
+extension View {
+    func kitchenChrome() -> some View {
+        toolbarBackground(AppTheme.bgBase, for: .navigationBar)
+            .toolbarBackground(.visible, for: .navigationBar)
+            .toolbarColorScheme(.light, for: .navigationBar)
+    }
+}
+
 struct IntStepperField: View {
     let title: String
     @Binding var value: Int

@@ -14,8 +14,10 @@ struct RootView: View {
                 OnboardingScreen()
             }
         }
+        .preferredColorScheme(.light)
         .task {
             Seed.bootstrap(context: modelContext)
+            try? modelContext.save()
         }
     }
 }

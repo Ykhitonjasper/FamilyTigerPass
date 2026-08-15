@@ -27,6 +27,7 @@
 		4896510EBE6FA89BED678D68 /* HouseholdEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72610F75ADAC8B69B1DF2D8E /* HouseholdEnums.swift */; };
 		48CB06EACDA2F33EF56F154F /* FormBits.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7984534706D214C98FDD30D /* FormBits.swift */; };
 		4A7FCDCDA2352BF2BD06D441 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6B38EC5DAF908C17E67A1365 /* Assets.xcassets */; };
+		4E6C7249F13A91432CB6410D /* KeyboardChrome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EEEFF2329E0676B268B3527 /* KeyboardChrome.swift */; };
 		512745421EF00FDBFAA0B63C /* ToolsHubScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FC53177C837F709FD14FA1 /* ToolsHubScreen.swift */; };
 		527DBD66749486973459D651 /* WaterRefillCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE8CF5694D38F18AF6001BEE /* WaterRefillCalculator.swift */; };
 		5A6D7617CD29AFEF31511E2C /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F3ACCD594578BF291CE6F6F /* MainTabView.swift */; };
@@ -102,6 +103,7 @@
 		94FB53267B4EAC46B5FC01AF /* PresetChipRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresetChipRow.swift; sourceTree = "<group>"; };
 		95B3B750F20B3D3AD8C843F0 /* WalkWindowCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkWindowCalculator.swift; sourceTree = "<group>"; };
 		98B2F882395916D732527E55 /* FamilyTigerPassApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyTigerPassApp.swift; sourceTree = "<group>"; };
+		9EEEFF2329E0676B268B3527 /* KeyboardChrome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardChrome.swift; sourceTree = "<group>"; };
 		9FFA6787D6D94A3EA773DF5A /* PresetCatalog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresetCatalog.swift; sourceTree = "<group>"; };
 		AE8CF5694D38F18AF6001BEE /* WaterRefillCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterRefillCalculator.swift; sourceTree = "<group>"; };
 		B17B74C31BD399DE4838B652 /* FamilyTigerPass.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = FamilyTigerPass.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -252,6 +254,7 @@
 				8D02450C44A7D3C495B40C92 /* CTAButton.swift */,
 				F7984534706D214C98FDD30D /* FormBits.swift */,
 				533A0A0DFAEEFA7DF3EE5FB6 /* GlassBg.swift */,
+				9EEEFF2329E0676B268B3527 /* KeyboardChrome.swift */,
 				94FB53267B4EAC46B5FC01AF /* PresetChipRow.swift */,
 				6AA8C02C7864F5E10F31ECA3 /* ResultCard.swift */,
 				8AD56199D1E278CFF96E941E /* SaveLineItemSheet.swift */,
@@ -425,6 +428,7 @@
 				4896510EBE6FA89BED678D68 /* HouseholdEnums.swift in Sources */,
 				6A9EC9118FC1FE900C7A558A /* KcalBandCalculator.swift in Sources */,
 				78BE617816197858013AB0A2 /* KcalBandScreen.swift in Sources */,
+				4E6C7249F13A91432CB6410D /* KeyboardChrome.swift in Sources */,
 				614395D51DB3108D62BA277E /* Legal.swift in Sources */,
 				6BA0ADFF7004AD9F8B402ECF /* LineItem.swift in Sources */,
 				5A6D7617CD29AFEF31511E2C /* MainTabView.swift in Sources */,

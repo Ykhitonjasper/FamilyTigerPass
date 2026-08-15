@@ -11,6 +11,7 @@ xcuserdata/
 # Build
 .build/
 DerivedData/
+DerivedData-device-local/
 
 # Secrets — this app's signing only, never commit
 *.p8

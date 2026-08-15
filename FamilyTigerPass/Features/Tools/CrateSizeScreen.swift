@@ -3,9 +3,7 @@ import SwiftUI
 struct CrateSizeScreen: View {
     var prefillJSON: String? = nil
     @State private var bodyLengthCm = 78.0
-    @State private var output: CrateSizeCalculator.Output?
-    @State private var showSave = false
-    @State private var computePulse = false
+    @State private var saveDraft: SaveDraft?
 
     var body: some View {
         ScrollView {
@@ -25,31 +23,21 @@ struct CrateSizeScreen: View {
                         .font(.footnote)
                         .foregroundStyle(AppTheme.textSecondary)
                 }
-                CTAButton(title: "Compute") { compute() }
-                if let output {
-                    ResultCard(title: CalculatorKind.crateSize.title, rows: CrateSizeCalculator.rows(output))
-                    CTAButton(title: "Save to project", kind: .secondary) { showSave = true }
-                }
+                ResultCard(
+                    title: CalculatorKind.crateSize.title,
+                    rows: CrateSizeCalculator.rows(output),
+                    takeaway: CrateSizeCalculator.summary(output)
+                )
+                CTAButton(title: "Save to project") { offerSave() }
             }
             .padding()
         }
         .background(AppBackground())
         .navigationTitle(CalculatorKind.crateSize.title)
-        .sensoryFeedback(.impact, trigger: computePulse)
-        .sheet(isPresented: $showSave) {
-            if let output {
-                SaveLineItemSheet(
-                    kind: .crateSize,
-                    summary: CrateSizeCalculator.summary(output),
-                    detailJSON: CrateSizeCalculator.snapshot(input, output)
-                )
-            }
-        }
+        .toolWorkbench()
+        .saveToProject(draft: $saveDraft)
         .task {
-            if let prefillJSON {
-                applyJSON(prefillJSON)
-                compute()
-            }
+            if let prefillJSON { applyJSON(prefillJSON) }
         }
     }
 
@@ -57,9 +45,15 @@ struct CrateSizeScreen: View {
         CrateSizeCalculator.Input(bodyLengthCm: bodyLengthCm)
     }
 
-    private func compute() {
-        output = CrateSizeCalculator.compute(input)
-        computePulse.toggle()
+    private var output: CrateSizeCalculator.Output { CrateSizeCalculator.compute(input) }
+
+    private func offerSave() {
+        KeyboardChrome.dismiss()
+        saveDraft = SaveDraft(
+            kind: .crateSize,
+            summary: CrateSizeCalculator.summary(output),
+            detailJSON: CrateSizeCalculator.snapshot(input, output)
+        )
     }
 
     private func apply(_ preset: Preset) { applyJSON(preset.detailJSON) }
@@ -67,7 +61,6 @@ struct CrateSizeScreen: View {
     private func applyJSON(_ json: String) {
         guard let decoded = SnapshotJSON.decodeInputs(json, as: CrateSizeCalculator.Input.self) else { return }
         bodyLengthCm = decoded.bodyLengthCm
-        output = nil
     }
 }
 

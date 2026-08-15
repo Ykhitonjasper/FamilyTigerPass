@@ -1,25 +1,53 @@
 import SwiftUI
 import SwiftData
 
+struct SaveDraft: Identifiable {
+    let id = UUID()
+    let kind: CalculatorKind
+    let summary: String
+    let detailJSON: String
+}
+
+extension View {
+    func saveToProject(draft: Binding<SaveDraft?>) -> some View {
+        sheet(item: draft) { item in
+            SaveLineItemSheet(
+                kind: item.kind,
+                summary: item.summary,
+                detailJSON: item.detailJSON
+            )
+            .presentationDetents([.medium, .large])
+            .presentationDragIndicator(.visible)
+        }
+    }
+}
+
 struct SaveLineItemSheet: View {
     let kind: CalculatorKind
     let summary: String
     let detailJSON: String
     @Environment(\.modelContext) private var modelContext
     @Environment(\.dismiss) private var dismiss
-    @Query(sort: \Project.name) private var projects: [Project]
+    @Query(sort: \Project.createdAt) private var projects: [Project]
     @State private var selectedID: String = ""
     @State private var newName: String = ""
     @State private var savePulse = false
+    @State private var didSave = false
 
     var body: some View {
         NavigationStack {
             Form {
+                Section("This result") {
+                    Text(kind.title)
+                        .font(.headline)
+                    Text(summary)
+                        .foregroundStyle(AppTheme.textSecondary)
+                }
                 if !projects.isEmpty {
                     Picker("Project", selection: $selectedID) {
                         Text("New project").tag("")
                         ForEach(projects) { project in
-                            Text(project.name).tag(project.stableID)
+                            Text("\(project.name) · \(project.lineItems.count)").tag(project.stableID)
                         }
                     }
                 }
@@ -27,19 +55,25 @@ struct SaveLineItemSheet: View {
                     TextField("New project name", text: $newName)
                 }
                 Section {
-                    CTAButton(title: "Save") { save() }
-                        .listRowInsets(EdgeInsets())
-                        .listRowBackground(Color.clear)
+                    Button(didSave ? "Saved" : "Save") { save() }
+                        .disabled(didSave)
                 }
             }
             .scrollContentBackground(.hidden)
             .background(AppBackground())
             .navigationTitle("Save")
+            .toolbar {
+                ToolbarItem(placement: .cancellationAction) {
+                    Button("Close") { dismiss() }
+                }
+            }
             .sensoryFeedback(.success, trigger: savePulse)
         }
         .onAppear {
-            if selectedID.isEmpty, let first = projects.first {
-                selectedID = first.stableID
+            if selectedID.isEmpty {
+                selectedID = projects.first(where: { $0.stableID == "proj-lion-kitchen" })?.stableID
+                    ?? projects.first?.stableID
+                    ?? ""
             }
         }
     }
@@ -69,8 +103,12 @@ struct SaveLineItemSheet: View {
             project: project
         )
         modelContext.insert(item)
+        try? modelContext.save()
         savePulse.toggle()
-        dismiss()
+        didSave = true
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.6) {
+            dismiss()
+        }
     }
 }
 

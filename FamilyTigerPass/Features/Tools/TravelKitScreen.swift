@@ -7,9 +7,7 @@ struct TravelKitScreen: View {
     @State private var heatBand: HeatBand = .mild
     @State private var dailyFoodGramsPerPet = 210.0
     @State private var avgWeightKg = 14.0
-    @State private var output: TravelKitCalculator.Output?
-    @State private var showSave = false
-    @State private var computePulse = false
+    @State private var saveDraft: SaveDraft?
 
     var body: some View {
         ScrollView {
@@ -17,10 +15,16 @@ struct TravelKitScreen: View {
                 PresetChipRow(presets: PresetCatalog.presets(for: .travelKit)) { apply($0) }
                 DecimalField(title: "Hours away", value: $hoursAway, suffix: "h")
                 IntStepperField(title: "Pets", value: $petCount, range: 1...8)
-                Picker("Heat band", selection: $heatBand) {
-                    ForEach(HeatBand.allCases) { item in
-                        Text(item.label).tag(item)
+                VStack(alignment: .leading, spacing: 8) {
+                    Text("Heat band")
+                        .font(.subheadline.weight(.semibold))
+                        .foregroundStyle(AppTheme.textSecondary)
+                    Picker("Heat band", selection: $heatBand) {
+                        ForEach(HeatBand.allCases) { item in
+                            Text(item.label).tag(item)
+                        }
                     }
+                    .pickerStyle(.segmented)
                 }
                 DecimalField(title: "Food / pet / day", value: $dailyFoodGramsPerPet, suffix: "g")
                 DecimalField(title: "Avg weight", value: $avgWeightKg, suffix: "kg")
@@ -30,31 +34,21 @@ struct TravelKitScreen: View {
                 Text(ToolHelp.text(for: .travelKit))
                     .font(.footnote)
                     .foregroundStyle(AppTheme.textSecondary)
-                CTAButton(title: "Compute") { compute() }
-                if let output {
-                    ResultCard(title: CalculatorKind.travelKit.title, rows: TravelKitCalculator.rows(output))
-                    CTAButton(title: "Save to project", kind: .secondary) { showSave = true }
-                }
+                ResultCard(
+                    title: CalculatorKind.travelKit.title,
+                    rows: TravelKitCalculator.rows(output),
+                    takeaway: TravelKitCalculator.summary(output)
+                )
+                CTAButton(title: "Save to project") { offerSave() }
             }
             .padding()
         }
         .background(AppBackground())
         .navigationTitle(CalculatorKind.travelKit.title)
-        .sensoryFeedback(.impact, trigger: computePulse)
-        .sheet(isPresented: $showSave) {
-            if let output {
-                SaveLineItemSheet(
-                    kind: .travelKit,
-                    summary: TravelKitCalculator.summary(output),
-                    detailJSON: TravelKitCalculator.snapshot(input, output)
-                )
-            }
-        }
+        .toolWorkbench()
+        .saveToProject(draft: $saveDraft)
         .task {
-            if let prefillJSON {
-                applyJSON(prefillJSON)
-                compute()
-            }
+            if let prefillJSON { applyJSON(prefillJSON) }
         }
     }
 
@@ -68,9 +62,15 @@ struct TravelKitScreen: View {
         )
     }
 
-    private func compute() {
-        output = TravelKitCalculator.compute(input)
-        computePulse.toggle()
+    private var output: TravelKitCalculator.Output { TravelKitCalculator.compute(input) }
+
+    private func offerSave() {
+        KeyboardChrome.dismiss()
+        saveDraft = SaveDraft(
+            kind: .travelKit,
+            summary: TravelKitCalculator.summary(output),
+            detailJSON: TravelKitCalculator.snapshot(input, output)
+        )
     }
 
     private func apply(_ preset: Preset) { applyJSON(preset.detailJSON) }
@@ -82,7 +82,6 @@ struct TravelKitScreen: View {
         heatBand = decoded.heatBand
         dailyFoodGramsPerPet = decoded.dailyFoodGramsPerPet
         avgWeightKg = decoded.avgWeightKg
-        output = nil
     }
 }
 

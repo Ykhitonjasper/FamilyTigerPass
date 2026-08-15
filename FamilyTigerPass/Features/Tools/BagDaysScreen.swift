@@ -4,9 +4,7 @@ struct BagDaysScreen: View {
     var prefillJSON: String? = nil
     @State private var bagKg = 12.0
     @State private var dailyGrams = 640.0
-    @State private var output: BagDaysCalculator.Output?
-    @State private var showSave = false
-    @State private var computePulse = false
+    @State private var saveDraft: SaveDraft?
 
     var body: some View {
         ScrollView {
@@ -20,31 +18,21 @@ struct BagDaysScreen: View {
                 Text(ToolHelp.text(for: .bagDays))
                     .font(.footnote)
                     .foregroundStyle(AppTheme.textSecondary)
-                CTAButton(title: "Compute") { compute() }
-                if let output {
-                    ResultCard(title: CalculatorKind.bagDays.title, rows: BagDaysCalculator.rows(output))
-                    CTAButton(title: "Save to project", kind: .secondary) { showSave = true }
-                }
+                ResultCard(
+                    title: CalculatorKind.bagDays.title,
+                    rows: BagDaysCalculator.rows(output),
+                    takeaway: BagDaysCalculator.summary(output)
+                )
+                CTAButton(title: "Save to project") { offerSave() }
             }
             .padding()
         }
         .background(AppBackground())
         .navigationTitle(CalculatorKind.bagDays.title)
-        .sensoryFeedback(.impact, trigger: computePulse)
-        .sheet(isPresented: $showSave) {
-            if let output {
-                SaveLineItemSheet(
-                    kind: .bagDays,
-                    summary: BagDaysCalculator.summary(output),
-                    detailJSON: BagDaysCalculator.snapshot(input, output)
-                )
-            }
-        }
+        .toolWorkbench()
+        .saveToProject(draft: $saveDraft)
         .task {
-            if let prefillJSON {
-                applyJSON(prefillJSON)
-                compute()
-            }
+            if let prefillJSON { applyJSON(prefillJSON) }
         }
     }
 
@@ -52,9 +40,15 @@ struct BagDaysScreen: View {
         BagDaysCalculator.Input(bagKg: bagKg, dailyGrams: dailyGrams)
     }
 
-    private func compute() {
-        output = BagDaysCalculator.compute(input)
-        computePulse.toggle()
+    private var output: BagDaysCalculator.Output { BagDaysCalculator.compute(input, now: Date()) }
+
+    private func offerSave() {
+        KeyboardChrome.dismiss()
+        saveDraft = SaveDraft(
+            kind: .bagDays,
+            summary: BagDaysCalculator.summary(output),
+            detailJSON: BagDaysCalculator.snapshot(input, output)
+        )
     }
 
     private func apply(_ preset: Preset) { applyJSON(preset.detailJSON) }
@@ -63,7 +57,6 @@ struct BagDaysScreen: View {
         guard let decoded = SnapshotJSON.decodeInputs(json, as: BagDaysCalculator.Input.self) else { return }
         bagKg = decoded.bagKg
         dailyGrams = decoded.dailyGrams
-        output = nil
     }
 }
 

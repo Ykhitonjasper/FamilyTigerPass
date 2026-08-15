@@ -25,6 +25,7 @@ enum Seed {
 
         insertKitchen(kitchen, context: context)
         insertCabin(cabin, context: context)
+        try? context.save()
     }
 
     private static func insertKitchen(_ project: Project, context: ModelContext) {

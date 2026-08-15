@@ -5,54 +5,48 @@ struct KcalBandScreen: View {
     @State private var weightKg = 28.0
     @State private var lifeStage: LifeStage = .adult
     @State private var bcsBand: BCSBand = .ideal
-    @State private var output: KcalBandCalculator.Output?
-    @State private var showSave = false
-    @State private var computePulse = false
+    @State private var saveDraft: SaveDraft?
 
     var body: some View {
         ScrollView {
             VStack(alignment: .leading, spacing: 16) {
                 PresetChipRow(presets: PresetCatalog.presets(for: .kcalBand)) { apply($0) }
                 DecimalField(title: "Weight", value: $weightKg, suffix: "kg")
-                Picker("Life stage", selection: $lifeStage) {
-                    ForEach(LifeStage.allCases) { item in
-                        Text(item.label).tag(item)
+                labeledPicker("Life stage") {
+                    Picker("Life stage", selection: $lifeStage) {
+                        ForEach(LifeStage.allCases) { item in
+                            Text(item.chip).tag(item)
+                        }
                     }
+                    .pickerStyle(.segmented)
                 }
-                Picker("Body condition", selection: $bcsBand) {
-                    ForEach(BCSBand.allCases) { item in
-                        Text(item.label).tag(item)
+                labeledPicker("Body condition") {
+                    Picker("Body condition", selection: $bcsBand) {
+                        ForEach(BCSBand.allCases) { item in
+                            Text(item.label).tag(item)
+                        }
                     }
+                    .pickerStyle(.segmented)
                 }
+                breedRow
                 Text("Uses a resting-energy band, then life stage and body condition. Kitchen planning only.")
                     .font(.footnote)
                     .foregroundStyle(AppTheme.textSecondary)
-                breedRow
-                CTAButton(title: "Compute") { compute() }
-                if let output {
-                    ResultCard(title: CalculatorKind.kcalBand.title, rows: KcalBandCalculator.rows(output))
-                    CTAButton(title: "Save to project", kind: .secondary) { showSave = true }
-                }
+                ResultCard(
+                    title: CalculatorKind.kcalBand.title,
+                    rows: KcalBandCalculator.rows(output),
+                    takeaway: KcalBandCalculator.summary(output)
+                )
+                CTAButton(title: "Save to project") { offerSave() }
             }
             .padding()
         }
         .background(AppBackground())
         .navigationTitle(CalculatorKind.kcalBand.title)
-        .sensoryFeedback(.impact, trigger: computePulse)
-        .sheet(isPresented: $showSave) {
-            if let output {
-                SaveLineItemSheet(
-                    kind: .kcalBand,
-                    summary: KcalBandCalculator.summary(output),
-                    detailJSON: KcalBandCalculator.snapshot(input, output)
-                )
-            }
-        }
+        .toolWorkbench()
+        .saveToProject(draft: $saveDraft)
         .task {
-            if let prefillJSON {
-                applyJSON(prefillJSON)
-                compute()
-            }
+            if let prefillJSON { applyJSON(prefillJSON) }
         }
     }
 
@@ -66,7 +60,6 @@ struct KcalBandScreen: View {
                     ForEach(BreedCatalog.all) { breed in
                         Button {
                             weightKg = breed.typicalKg
-                            output = nil
                         } label: {
                             Text("\(breed.name) · \(breed.typicalKg, specifier: "%.0f") kg")
                                 .font(.caption)
@@ -86,13 +79,29 @@ struct KcalBandScreen: View {
         }
     }
 
+    @ViewBuilder
+    private func labeledPicker<Content: View>(_ title: String, @ViewBuilder content: () -> Content) -> some View {
+        VStack(alignment: .leading, spacing: 8) {
+            Text(title)
+                .font(.subheadline.weight(.semibold))
+                .foregroundStyle(AppTheme.textSecondary)
+            content()
+        }
+    }
+
     private var input: KcalBandCalculator.Input {
         KcalBandCalculator.Input(weightKg: weightKg, lifeStage: lifeStage, bcsBand: bcsBand)
     }
 
-    private func compute() {
-        output = KcalBandCalculator.compute(input)
-        computePulse.toggle()
+    private var output: KcalBandCalculator.Output { KcalBandCalculator.compute(input) }
+
+    private func offerSave() {
+        KeyboardChrome.dismiss()
+        saveDraft = SaveDraft(
+            kind: .kcalBand,
+            summary: KcalBandCalculator.summary(output),
+            detailJSON: KcalBandCalculator.snapshot(input, output)
+        )
     }
 
     private func apply(_ preset: Preset) { applyJSON(preset.detailJSON) }
@@ -102,7 +111,6 @@ struct KcalBandScreen: View {
         weightKg = decoded.weightKg
         lifeStage = decoded.lifeStage
         bcsBand = decoded.bcsBand
-        output = nil
     }
 }
 

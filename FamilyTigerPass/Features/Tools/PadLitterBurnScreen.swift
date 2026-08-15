@@ -6,25 +6,35 @@ struct PadLitterBurnScreen: View {
     @State private var supplyKind: SupplyKind = .pads
     @State private var durationValue = 9.0
     @State private var durationUnit: DurationUnit = .hours
-    @State private var output: PadLitterBurnCalculator.Output?
-    @State private var showSave = false
-    @State private var computePulse = false
+    @State private var saveDraft: SaveDraft?
 
     var body: some View {
         ScrollView {
             VStack(alignment: .leading, spacing: 16) {
                 PresetChipRow(presets: PresetCatalog.presets(for: .padLitterBurn)) { apply($0) }
                 IntStepperField(title: "Pets", value: $petCount, range: 1...8)
-                Picker("Supply", selection: $supplyKind) {
-                    ForEach(SupplyKind.allCases) { item in
-                        Text(item.label).tag(item)
+                VStack(alignment: .leading, spacing: 8) {
+                    Text("Supply")
+                        .font(.subheadline.weight(.semibold))
+                        .foregroundStyle(AppTheme.textSecondary)
+                    Picker("Supply", selection: $supplyKind) {
+                        ForEach(SupplyKind.allCases) { item in
+                            Text(item.label).tag(item)
+                        }
                     }
+                    .pickerStyle(.segmented)
                 }
                 DecimalField(title: "Duration", value: $durationValue, suffix: "")
-                Picker("Unit", selection: $durationUnit) {
-                    ForEach(DurationUnit.allCases) { item in
-                        Text(item.label).tag(item)
+                VStack(alignment: .leading, spacing: 8) {
+                    Text("Unit")
+                        .font(.subheadline.weight(.semibold))
+                        .foregroundStyle(AppTheme.textSecondary)
+                    Picker("Unit", selection: $durationUnit) {
+                        ForEach(DurationUnit.allCases) { item in
+                            Text(item.label).tag(item)
+                        }
                     }
+                    .pickerStyle(.segmented)
                 }
                 Text("Pads scale with hours. Litter boxes scale with days. Switch the unit to match the trip.")
                     .font(.footnote)
@@ -32,31 +42,21 @@ struct PadLitterBurnScreen: View {
                 Text(ToolHelp.text(for: .padLitterBurn))
                     .font(.footnote)
                     .foregroundStyle(AppTheme.textSecondary)
-                CTAButton(title: "Compute") { compute() }
-                if let output {
-                    ResultCard(title: CalculatorKind.padLitterBurn.title, rows: PadLitterBurnCalculator.rows(output))
-                    CTAButton(title: "Save to project", kind: .secondary) { showSave = true }
-                }
+                ResultCard(
+                    title: CalculatorKind.padLitterBurn.title,
+                    rows: PadLitterBurnCalculator.rows(output),
+                    takeaway: PadLitterBurnCalculator.summary(output)
+                )
+                CTAButton(title: "Save to project") { offerSave() }
             }
             .padding()
         }
         .background(AppBackground())
         .navigationTitle(CalculatorKind.padLitterBurn.title)
-        .sensoryFeedback(.impact, trigger: computePulse)
-        .sheet(isPresented: $showSave) {
-            if let output {
-                SaveLineItemSheet(
-                    kind: .padLitterBurn,
-                    summary: PadLitterBurnCalculator.summary(output),
-                    detailJSON: PadLitterBurnCalculator.snapshot(input, output)
-                )
-            }
-        }
+        .toolWorkbench()
+        .saveToProject(draft: $saveDraft)
         .task {
-            if let prefillJSON {
-                applyJSON(prefillJSON)
-                compute()
-            }
+            if let prefillJSON { applyJSON(prefillJSON) }
         }
     }
 
@@ -69,9 +69,15 @@ struct PadLitterBurnScreen: View {
         )
     }
 
-    private func compute() {
-        output = PadLitterBurnCalculator.compute(input)
-        computePulse.toggle()
+    private var output: PadLitterBurnCalculator.Output { PadLitterBurnCalculator.compute(input) }
+
+    private func offerSave() {
+        KeyboardChrome.dismiss()
+        saveDraft = SaveDraft(
+            kind: .padLitterBurn,
+            summary: PadLitterBurnCalculator.summary(output),
+            detailJSON: PadLitterBurnCalculator.snapshot(input, output)
+        )
     }
 
     private func apply(_ preset: Preset) { applyJSON(preset.detailJSON) }
@@ -82,7 +88,6 @@ struct PadLitterBurnScreen: View {
         supplyKind = decoded.supplyKind
         durationValue = decoded.durationValue
         durationUnit = decoded.durationUnit
-        output = nil
     }
 }
 

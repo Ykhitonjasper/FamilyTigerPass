@@ -3,20 +3,26 @@ import SwiftUI
 struct ResultCard: View {
     let title: String
     let rows: [ResultRow]
+    var takeaway: String? = nil
 
     var body: some View {
         VStack(alignment: .leading, spacing: 12) {
             Text(title)
                 .font(.headline)
                 .foregroundStyle(AppTheme.textPrimary)
+            if let takeaway, !takeaway.isEmpty {
+                Text(takeaway)
+                    .font(.subheadline.weight(.semibold))
+                    .foregroundStyle(AppTheme.textMono)
+            }
             ForEach(rows) { row in
                 HStack(alignment: .firstTextBaseline) {
                     Text(row.label)
                         .foregroundStyle(AppTheme.textSecondary)
                     Spacer()
                     Text(row.value)
-                        .font(.body.monospacedDigit())
-                        .foregroundStyle(AppTheme.textMono)
+                        .font(.title3.monospacedDigit().weight(.semibold))
+                        .foregroundStyle(AppTheme.textPrimary)
                 }
                 .accessibilityElement(children: .combine)
             }
