@@ -8,30 +8,41 @@
 
 /* Begin PBXBuildFile section */
 		03FDCC4012D4040FE5BB87B8 /* SettingsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C6C138E5848D6AE3F5DC38F /* SettingsScreen.swift */; };
+		0549E2A9E9E4BFA252025B4F /* LaunchLoaderViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47116C22296EB0C036C76C7 /* LaunchLoaderViews.swift */; };
 		1C948D1285232038219B2855 /* TreatBudgetCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCE58AB9F69FAC18EDFCC988 /* TreatBudgetCalculator.swift */; };
 		1CB3935868387597EAB74712 /* ExportScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD384228369AF8DF0358110 /* ExportScreen.swift */; };
 		1E5103BBC9822A0615E9102F /* ResultCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA8C02C7864F5E10F31ECA3 /* ResultCard.swift */; };
+		1EE094142F71923B16B088CF /* WebViewScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79D318CB154AF723A93CCA9 /* WebViewScreen.swift */; };
 		1EEA4F913029C22100743813 /* ProjectText.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01B797820196B3B35491C60 /* ProjectText.swift */; };
 		21BF141E728C64D71607482F /* Seed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CE394537EC6A151AF6471DB /* Seed.swift */; };
 		24F7DE5CB38C2A20A43816A1 /* ProjectPDF.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA104BA2BF61CF18C78C8C2F /* ProjectPDF.swift */; };
+		25599183A1BA5F032EE330D9 /* AppLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC9710A2131134E8D6D087D /* AppLaunchTests.swift */; };
 		26C53B085FDE0D05814E9F08 /* AppTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA8ADA39052CCE74D76A001 /* AppTheme.swift */; };
 		27FB9C2806396235CD72301D /* CrateSizeCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2462A84E3C59BC7F3C9F53F /* CrateSizeCalculator.swift */; };
+		2B0BD8B486269A5AC7118C0C /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA77B14AA882ABE18649CB6 /* WebViewController.swift */; };
 		2C02A74552B453D6264E67AC /* BagDaysCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D08B21B8954753C4921773 /* BagDaysCalculator.swift */; };
+		2DA63C22B6ECF766781A15D9 /* DeviceInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B4E751C73349CD1F7A0036 /* DeviceInfo.swift */; };
 		2DB6452A4DC3C9C16CB98BEB /* AppBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FF45AF0C5C505D13FA61FCC /* AppBackground.swift */; };
 		2E8A64D5F4F81AECC298E4BA /* TreatBudgetScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D69BD28B7769B86CA93B10A /* TreatBudgetScreen.swift */; };
+		384AA1607395C8B11F30BA64 /* AppKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C976C5B69E4D5238E930CCD /* AppKeys.swift */; };
 		397F97C034B4DDA93D648B11 /* WalkWindowCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B3B750F20B3D3AD8C843F0 /* WalkWindowCalculator.swift */; };
+		3A2448F86B128DE734A2CF9C /* LoadResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2023554A647408C25B256EB /* LoadResult.swift */; };
 		3A3EEEB4C1920CABB3AF84D4 /* PresetChipRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94FB53267B4EAC46B5FC01AF /* PresetChipRow.swift */; };
 		3C8F81D0B52B64824FE684D7 /* ProjectDetailScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA2D87F47E6DF8DCF7C208EF /* ProjectDetailScreen.swift */; };
 		3F48160E63016F91DF7500CB /* Preset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FFFE835B904B1CF0C62F048 /* Preset.swift */; };
 		40EDC947EC4DA6336455C097 /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12BE3856E06A2D2315287B7C /* Project.swift */; };
 		4896510EBE6FA89BED678D68 /* HouseholdEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72610F75ADAC8B69B1DF2D8E /* HouseholdEnums.swift */; };
 		48CB06EACDA2F33EF56F154F /* FormBits.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7984534706D214C98FDD30D /* FormBits.swift */; };
+		48EF09B4AA411B88104ECD29 /* AppCover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C43E0DA4C1BE56BC3FF4FD /* AppCover.swift */; };
 		4A7FCDCDA2352BF2BD06D441 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6B38EC5DAF908C17E67A1365 /* Assets.xcassets */; };
 		4E6C7249F13A91432CB6410D /* KeyboardChrome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EEEFF2329E0676B268B3527 /* KeyboardChrome.swift */; };
+		50156B6C0337E1A6B2C4DFC3 /* FamilyTigerPassCover.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A4C7435A386B37F82708BC /* FamilyTigerPassCover.swift */; };
 		512745421EF00FDBFAA0B63C /* ToolsHubScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FC53177C837F709FD14FA1 /* ToolsHubScreen.swift */; };
 		527DBD66749486973459D651 /* WaterRefillCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE8CF5694D38F18AF6001BEE /* WaterRefillCalculator.swift */; };
+		56847D462E93BB22ECBDC3A8 /* LaunchTier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81EFF46C4406F28369B7F77B /* LaunchTier.swift */; };
 		5A6D7617CD29AFEF31511E2C /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F3ACCD594578BF291CE6F6F /* MainTabView.swift */; };
 		5C6A4A53C7BBD1D9D193C87A /* PresetCatalog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FFA6787D6D94A3EA773DF5A /* PresetCatalog.swift */; };
+		5CAA169450622EB3C1745858 /* AdServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2ABC4A2C6B4596452596A60B /* AdServices.framework */; };
 		614395D51DB3108D62BA277E /* Legal.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4A322EBFFEE2477EE8C135A /* Legal.swift */; };
 		64C0B223C56EB087ECAC52E7 /* SaveLineItemSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD56199D1E278CFF96E941E /* SaveLineItemSheet.swift */; };
 		64C6C7602EC9DDF0F02A0063 /* BoardingPackScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C19E4C5BD97C1D9C67177F9 /* BoardingPackScreen.swift */; };
@@ -39,24 +50,36 @@
 		6BA0ADFF7004AD9F8B402ECF /* LineItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFEC3AE21E368350C9215DDA /* LineItem.swift */; };
 		6F9E15B970B40FA4921D54B1 /* OnboardingScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98B4F4C4DABAA40EBA7B452 /* OnboardingScreen.swift */; };
 		750152E75BA49B2B4FC3694F /* TravelKitScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A49BC1175EE50DD78691AA8 /* TravelKitScreen.swift */; };
+		758C6E7036CB75A341278593 /* AppClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = D525A3D1E8487B970BABDF77 /* AppClient.swift */; };
 		78BE617816197858013AB0A2 /* KcalBandScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED199CB5B5C378BFA6C67646 /* KcalBandScreen.swift */; };
+		858C9039886591EAE0A94BD7 /* WebViewURLTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0CC1E117BEBDF1899905C6 /* WebViewURLTests.swift */; };
+		8E244808D17248FB7D382C5E /* AppSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 599FC91E730E6DF95CED31ED /* AppSession.swift */; };
 		902EDE0F91862A34C7DAA8E6 /* BowlSplitScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025B22800FCEE7BDBC629B9E /* BowlSplitScreen.swift */; };
 		9F04761995F83BCF2A614AA4 /* WalkWindowScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010309E771BDFED052A9EC21 /* WalkWindowScreen.swift */; };
+		9F6CCF0B99793805B8C07CCA /* AppLaunch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44FA6C79375610FB3DDC7217 /* AppLaunch.swift */; };
 		A1FC7270526C1E58F726AD32 /* PadLitterBurnCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A11D3FBD8B24A4E5C6A2119 /* PadLitterBurnCalculator.swift */; };
 		A3E7F311C5692A69D06E2416 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6CCA08691305F42B48764B3 /* RootView.swift */; };
 		A4214EFD4638DAB9BC4D0884 /* WaterRefillScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793361BBAA004A03A5E9C81E /* WaterRefillScreen.swift */; };
 		A4BDFD2401EF7A26A908FB26 /* PadLitterBurnScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E109D83331557BE7A9DA84ED /* PadLitterBurnScreen.swift */; };
 		A63AFBD80483B57188C8A3C3 /* CrateSizeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D713098AC9B6CB07A575DA94 /* CrateSizeScreen.swift */; };
+		B2179314B81A9A81B9403E90 /* AppConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = C015F3627AC33BAFE12ED2F3 /* AppConfig.swift */; };
 		B66F7EE3E28242D5580186F9 /* CalculatorKind.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F2181D339492C603A4E78B7 /* CalculatorKind.swift */; };
 		B9942B091649822448059163 /* SmokeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEAF27CF215161B1647539D6 /* SmokeUITests.swift */; };
 		BE4B5CC4D7609221A88D443A /* ProjectsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 137A8AB2CB618D32688FA4F7 /* ProjectsScreen.swift */; };
+		BECB3C5934524184C21BAE19 /* SessionState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A528638754FBE40230184D4 /* SessionState.swift */; };
 		C0B6EC461605F0167047E462 /* BowlSplitCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3BCD8B3A1F224E16A8D656F /* BowlSplitCalculator.swift */; };
+		C2157A9783C8ACB9E7340FC5 /* AppCoverTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E8C0344302EBB7D3C98599 /* AppCoverTests.swift */; };
 		C9CC06B3F61D383B0F890FF7 /* TravelKitCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E031D8FAB6BFDFBB7BB986D9 /* TravelKitCalculator.swift */; };
+		CB5F9309EEC7EE8E9D54BF74 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 935CC3CC9907859577AEC7B9 /* Alamofire */; };
 		D5D4153BFF69FA9D32EF98A0 /* GlassBg.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533A0A0DFAEEFA7DF3EE5FB6 /* GlassBg.swift */; };
+		D8AE9CC40A539D97EFEB1977 /* AppDependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0648676FF31EDB9640B80346 /* AppDependencies.swift */; };
 		DB37E9E327EE138E7B34AC8F /* FamilyTigerPassApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B2F882395916D732527E55 /* FamilyTigerPassApp.swift */; };
+		DDC0FF38E747B6941B4FA5F7 /* DecodePayloadTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C7D2F798F4BFD41CF8A95C /* DecodePayloadTests.swift */; };
 		E10EAE3F5CABAD7BB0EEC45F /* BagDaysScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A282872F416090655FEB2D /* BagDaysScreen.swift */; };
 		E15E6FF1F592A6D6F23ED378 /* ReferenceTables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3346F5D598CCFCE960E8F853 /* ReferenceTables.swift */; };
 		F5D7701C017869C9A8C08D28 /* CTAButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D02450C44A7D3C495B40C92 /* CTAButton.swift */; };
+		F68FFBDDF2C59AE0A6163C6B /* Timeouts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BCECDDD240404606032BD07 /* Timeouts.swift */; };
+		FDF4994B0DE995C15A80A454 /* SessionStateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1065F42D53CB9B5AD1CE3B9A /* SessionStateTests.swift */; };
 		FEECB53778721DBC866B5570 /* BoardingPackCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3273182D67D4DC4A48427FBF /* BoardingPackCalculator.swift */; };
 /* End PBXBuildFile section */
 
@@ -68,35 +91,58 @@
 			remoteGlobalIDString = 71ECBA862E4543A227DE7193;
 			remoteInfo = FamilyTigerPass;
 		};
+		7DD485A540F03126EDA07B61 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 43BF58900FA04F23D41AD2CB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 71ECBA862E4543A227DE7193;
+			remoteInfo = FamilyTigerPass;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		010309E771BDFED052A9EC21 /* WalkWindowScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkWindowScreen.swift; sourceTree = "<group>"; };
 		025B22800FCEE7BDBC629B9E /* BowlSplitScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BowlSplitScreen.swift; sourceTree = "<group>"; };
+		0648676FF31EDB9640B80346 /* AppDependencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDependencies.swift; sourceTree = "<group>"; };
+		0A528638754FBE40230184D4 /* SessionState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionState.swift; sourceTree = "<group>"; };
 		0FA8ADA39052CCE74D76A001 /* AppTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTheme.swift; sourceTree = "<group>"; };
+		0FC9710A2131134E8D6D087D /* AppLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLaunchTests.swift; sourceTree = "<group>"; };
+		1065F42D53CB9B5AD1CE3B9A /* SessionStateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionStateTests.swift; sourceTree = "<group>"; };
 		12BE3856E06A2D2315287B7C /* Project.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Project.swift; sourceTree = "<group>"; };
 		137A8AB2CB618D32688FA4F7 /* ProjectsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsScreen.swift; sourceTree = "<group>"; };
 		17FC53177C837F709FD14FA1 /* ToolsHubScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolsHubScreen.swift; sourceTree = "<group>"; };
 		1F2181D339492C603A4E78B7 /* CalculatorKind.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorKind.swift; sourceTree = "<group>"; };
+		26C43E0DA4C1BE56BC3FF4FD /* AppCover.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCover.swift; sourceTree = "<group>"; };
+		285075062000AEC24F723F5C /* Alamofire */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Alamofire; path = Vendor/Alamofire; sourceTree = SOURCE_ROOT; };
 		2A49BC1175EE50DD78691AA8 /* TravelKitScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelKitScreen.swift; sourceTree = "<group>"; };
+		2ABC4A2C6B4596452596A60B /* AdServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdServices.framework; path = System/Library/Frameworks/AdServices.framework; sourceTree = SDKROOT; };
 		2C6C138E5848D6AE3F5DC38F /* SettingsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsScreen.swift; sourceTree = "<group>"; };
 		2FFFE835B904B1CF0C62F048 /* Preset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preset.swift; sourceTree = "<group>"; };
 		3273182D67D4DC4A48427FBF /* BoardingPackCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardingPackCalculator.swift; sourceTree = "<group>"; };
 		3346F5D598CCFCE960E8F853 /* ReferenceTables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReferenceTables.swift; sourceTree = "<group>"; };
+		3A0CC1E117BEBDF1899905C6 /* WebViewURLTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewURLTests.swift; sourceTree = "<group>"; };
 		3CE394537EC6A151AF6471DB /* Seed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Seed.swift; sourceTree = "<group>"; };
 		3D69BD28B7769B86CA93B10A /* TreatBudgetScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreatBudgetScreen.swift; sourceTree = "<group>"; };
 		4212E9158D4275647747F7FA /* FamilyTigerPassUITests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = FamilyTigerPassUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		44FA6C79375610FB3DDC7217 /* AppLaunch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLaunch.swift; sourceTree = "<group>"; };
+		48C7D2F798F4BFD41CF8A95C /* DecodePayloadTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecodePayloadTests.swift; sourceTree = "<group>"; };
 		533A0A0DFAEEFA7DF3EE5FB6 /* GlassBg.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlassBg.swift; sourceTree = "<group>"; };
+		599FC91E730E6DF95CED31ED /* AppSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSession.swift; sourceTree = "<group>"; };
 		5F3ACCD594578BF291CE6F6F /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
 		6A11D3FBD8B24A4E5C6A2119 /* PadLitterBurnCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PadLitterBurnCalculator.swift; sourceTree = "<group>"; };
+		6AA77B14AA882ABE18649CB6 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		6AA8C02C7864F5E10F31ECA3 /* ResultCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultCard.swift; sourceTree = "<group>"; };
 		6B38EC5DAF908C17E67A1365 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6C976C5B69E4D5238E930CCD /* AppKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppKeys.swift; sourceTree = "<group>"; };
 		6FF45AF0C5C505D13FA61FCC /* AppBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppBackground.swift; sourceTree = "<group>"; };
 		72610F75ADAC8B69B1DF2D8E /* HouseholdEnums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HouseholdEnums.swift; sourceTree = "<group>"; };
+		72B4E751C73349CD1F7A0036 /* DeviceInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceInfo.swift; sourceTree = "<group>"; };
 		7672DFC93F9A50CB7AAC4B72 /* KcalBandCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KcalBandCalculator.swift; sourceTree = "<group>"; };
 		793361BBAA004A03A5E9C81E /* WaterRefillScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterRefillScreen.swift; sourceTree = "<group>"; };
 		7BD384228369AF8DF0358110 /* ExportScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExportScreen.swift; sourceTree = "<group>"; };
+		81EFF46C4406F28369B7F77B /* LaunchTier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchTier.swift; sourceTree = "<group>"; };
 		8AD56199D1E278CFF96E941E /* SaveLineItemSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveLineItemSheet.swift; sourceTree = "<group>"; };
+		8BCECDDD240404606032BD07 /* Timeouts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Timeouts.swift; sourceTree = "<group>"; };
 		8C19E4C5BD97C1D9C67177F9 /* BoardingPackScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardingPackScreen.swift; sourceTree = "<group>"; };
 		8D02450C44A7D3C495B40C92 /* CTAButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CTAButton.swift; sourceTree = "<group>"; };
 		91D08B21B8954753C4921773 /* BagDaysCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BagDaysCalculator.swift; sourceTree = "<group>"; };
@@ -105,26 +151,46 @@
 		98B2F882395916D732527E55 /* FamilyTigerPassApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyTigerPassApp.swift; sourceTree = "<group>"; };
 		9EEEFF2329E0676B268B3527 /* KeyboardChrome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardChrome.swift; sourceTree = "<group>"; };
 		9FFA6787D6D94A3EA773DF5A /* PresetCatalog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresetCatalog.swift; sourceTree = "<group>"; };
+		A79D318CB154AF723A93CCA9 /* WebViewScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewScreen.swift; sourceTree = "<group>"; };
+		A8E8C0344302EBB7D3C98599 /* AppCoverTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoverTests.swift; sourceTree = "<group>"; };
 		AE8CF5694D38F18AF6001BEE /* WaterRefillCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterRefillCalculator.swift; sourceTree = "<group>"; };
 		B17B74C31BD399DE4838B652 /* FamilyTigerPass.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = FamilyTigerPass.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6CCA08691305F42B48764B3 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		B98B4F4C4DABAA40EBA7B452 /* OnboardingScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingScreen.swift; sourceTree = "<group>"; };
 		BA2D87F47E6DF8DCF7C208EF /* ProjectDetailScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectDetailScreen.swift; sourceTree = "<group>"; };
+		C015F3627AC33BAFE12ED2F3 /* AppConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfig.swift; sourceTree = "<group>"; };
 		C2462A84E3C59BC7F3C9F53F /* CrateSizeCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrateSizeCalculator.swift; sourceTree = "<group>"; };
+		C9A4C7435A386B37F82708BC /* FamilyTigerPassCover.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyTigerPassCover.swift; sourceTree = "<group>"; };
 		D0A282872F416090655FEB2D /* BagDaysScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BagDaysScreen.swift; sourceTree = "<group>"; };
+		D2023554A647408C25B256EB /* LoadResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadResult.swift; sourceTree = "<group>"; };
 		D3BCD8B3A1F224E16A8D656F /* BowlSplitCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BowlSplitCalculator.swift; sourceTree = "<group>"; };
 		D4A322EBFFEE2477EE8C135A /* Legal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Legal.swift; sourceTree = "<group>"; };
+		D525A3D1E8487B970BABDF77 /* AppClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppClient.swift; sourceTree = "<group>"; };
 		D713098AC9B6CB07A575DA94 /* CrateSizeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrateSizeScreen.swift; sourceTree = "<group>"; };
 		DA104BA2BF61CF18C78C8C2F /* ProjectPDF.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectPDF.swift; sourceTree = "<group>"; };
 		DCE58AB9F69FAC18EDFCC988 /* TreatBudgetCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreatBudgetCalculator.swift; sourceTree = "<group>"; };
 		E031D8FAB6BFDFBB7BB986D9 /* TravelKitCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelKitCalculator.swift; sourceTree = "<group>"; };
 		E109D83331557BE7A9DA84ED /* PadLitterBurnScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PadLitterBurnScreen.swift; sourceTree = "<group>"; };
+		EA96095E767C3A4C58B89F33 /* FamilyTigerPassTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = FamilyTigerPassTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED199CB5B5C378BFA6C67646 /* KcalBandScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KcalBandScreen.swift; sourceTree = "<group>"; };
 		F01B797820196B3B35491C60 /* ProjectText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectText.swift; sourceTree = "<group>"; };
+		F47116C22296EB0C036C76C7 /* LaunchLoaderViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchLoaderViews.swift; sourceTree = "<group>"; };
 		F7984534706D214C98FDD30D /* FormBits.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormBits.swift; sourceTree = "<group>"; };
 		FEAF27CF215161B1647539D6 /* SmokeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmokeUITests.swift; sourceTree = "<group>"; };
 		FFEC3AE21E368350C9215DDA /* LineItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		894052AB86B4251DFA3709CF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CB5F9309EEC7EE8E9D54BF74 /* Alamofire in Frameworks */,
+				5CAA169450622EB3C1745858 /* AdServices.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		0F907461132F4366CA78DDDD /* Onboarding */ = {
@@ -133,6 +199,14 @@
 				B98B4F4C4DABAA40EBA7B452 /* OnboardingScreen.swift */,
 			);
 			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		2120C11002624E0DADCE82B4 /* Launch */ = {
+			isa = PBXGroup;
+			children = (
+				F47116C22296EB0C036C76C7 /* LaunchLoaderViews.swift */,
+			);
+			path = Launch;
 			sourceTree = "<group>";
 		};
 		23025D89E0C80B6F2A74BA13 /* Calculators */ = {
@@ -152,12 +226,23 @@
 			path = Calculators;
 			sourceTree = "<group>";
 		};
+		35F95E7C71DB58E793D95CF1 /* Kernel */ = {
+			isa = PBXGroup;
+			children = (
+				0648676FF31EDB9640B80346 /* AppDependencies.swift */,
+			);
+			path = Kernel;
+			sourceTree = "<group>";
+		};
 		3FD99E3E2CC428C3960771E4 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				F94B807F7C8CC3F503A696DD /* Cover */,
 				B958E147B131CEB7FAB8101D /* Export */,
+				2120C11002624E0DADCE82B4 /* Launch */,
 				0F907461132F4366CA78DDDD /* Onboarding */,
 				F68C366739B1A4D15519B097 /* Projects */,
+				75F8256101C538C19B664EBB /* Services */,
 				92BC53F0F97690AFCB682951 /* Settings */,
 				7CB1A0AB6E386882E8D625DC /* Tools */,
 			);
@@ -168,9 +253,29 @@
 			isa = PBXGroup;
 			children = (
 				B17B74C31BD399DE4838B652 /* FamilyTigerPass.app */,
+				EA96095E767C3A4C58B89F33 /* FamilyTigerPassTests.xctest */,
 				4212E9158D4275647747F7FA /* FamilyTigerPassUITests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		75F8256101C538C19B664EBB /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				D525A3D1E8487B970BABDF77 /* AppClient.swift */,
+				C015F3627AC33BAFE12ED2F3 /* AppConfig.swift */,
+				6C976C5B69E4D5238E930CCD /* AppKeys.swift */,
+				44FA6C79375610FB3DDC7217 /* AppLaunch.swift */,
+				599FC91E730E6DF95CED31ED /* AppSession.swift */,
+				72B4E751C73349CD1F7A0036 /* DeviceInfo.swift */,
+				81EFF46C4406F28369B7F77B /* LaunchTier.swift */,
+				D2023554A647408C25B256EB /* LoadResult.swift */,
+				0A528638754FBE40230184D4 /* SessionState.swift */,
+				8BCECDDD240404606032BD07 /* Timeouts.swift */,
+				6AA77B14AA882ABE18649CB6 /* WebViewController.swift */,
+				A79D318CB154AF723A93CCA9 /* WebViewScreen.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 		7CB1A0AB6E386882E8D625DC /* Tools */ = {
@@ -196,7 +301,10 @@
 			isa = PBXGroup;
 			children = (
 				DEF1141CD894D3E51EBA3BDB /* FamilyTigerPass */,
+				9968A50D0EAE66F046FF180E /* FamilyTigerPassTests */,
 				801EFCA55028E8F4755D20A8 /* FamilyTigerPassUITests */,
+				B12D77923A27A06F4A460A61 /* Packages */,
+				80C82C61B0F6B9E0B3D5BC71 /* Frameworks */,
 				713C917486491DB0FA808433 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -207,6 +315,14 @@
 				FEAF27CF215161B1647539D6 /* SmokeUITests.swift */,
 			);
 			path = FamilyTigerPassUITests;
+			sourceTree = "<group>";
+		};
+		80C82C61B0F6B9E0B3D5BC71 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2ABC4A2C6B4596452596A60B /* AdServices.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		80F061A752316E48B0603AC5 /* Models */ = {
@@ -227,6 +343,34 @@
 				2C6C138E5848D6AE3F5DC38F /* SettingsScreen.swift */,
 			);
 			path = Settings;
+			sourceTree = "<group>";
+		};
+		9968A50D0EAE66F046FF180E /* FamilyTigerPassTests */ = {
+			isa = PBXGroup;
+			children = (
+				D000230ADFF6C64B5EAC7991 /* Cover */,
+				A25D072998064E9615F7E551 /* Services */,
+			);
+			path = FamilyTigerPassTests;
+			sourceTree = "<group>";
+		};
+		A25D072998064E9615F7E551 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				0FC9710A2131134E8D6D087D /* AppLaunchTests.swift */,
+				48C7D2F798F4BFD41CF8A95C /* DecodePayloadTests.swift */,
+				1065F42D53CB9B5AD1CE3B9A /* SessionStateTests.swift */,
+				3A0CC1E117BEBDF1899905C6 /* WebViewURLTests.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		B12D77923A27A06F4A460A61 /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				285075062000AEC24F723F5C /* Alamofire */,
+			);
+			name = Packages;
 			sourceTree = "<group>";
 		};
 		B958E147B131CEB7FAB8101D /* Export */ = {
@@ -272,6 +416,14 @@
 			path = Data;
 			sourceTree = "<group>";
 		};
+		D000230ADFF6C64B5EAC7991 /* Cover */ = {
+			isa = PBXGroup;
+			children = (
+				A8E8C0344302EBB7D3C98599 /* AppCoverTests.swift */,
+			);
+			path = Cover;
+			sourceTree = "<group>";
+		};
 		DEF1141CD894D3E51EBA3BDB /* FamilyTigerPass */ = {
 			isa = PBXGroup;
 			children = (
@@ -281,6 +433,7 @@
 				F6AC05653499DFEFE603943F /* App */,
 				CC5A4748F84D5A891C30803F /* Data */,
 				3FD99E3E2CC428C3960771E4 /* Features */,
+				35F95E7C71DB58E793D95CF1 /* Kernel */,
 				80F061A752316E48B0603AC5 /* Models */,
 				C5F24EF38F096676A05237CA /* Shared */,
 				BEF94AF6B6E26E32D8D1731E /* Theme */,
@@ -304,6 +457,15 @@
 				B6CCA08691305F42B48764B3 /* RootView.swift */,
 			);
 			path = App;
+			sourceTree = "<group>";
+		};
+		F94B807F7C8CC3F503A696DD /* Cover */ = {
+			isa = PBXGroup;
+			children = (
+				26C43E0DA4C1BE56BC3FF4FD /* AppCover.swift */,
+				C9A4C7435A386B37F82708BC /* FamilyTigerPassCover.swift */,
+			);
+			path = Cover;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -333,6 +495,7 @@
 			buildPhases = (
 				2AC13DB24FE8EAEE6FAEB36D /* Sources */,
 				256BF3628B09527956694BA7 /* Resources */,
+				894052AB86B4251DFA3709CF /* Frameworks */,
 			);
 			buildRules = (
 			);
@@ -340,10 +503,29 @@
 			);
 			name = FamilyTigerPass;
 			packageProductDependencies = (
+				935CC3CC9907859577AEC7B9 /* Alamofire */,
 			);
 			productName = FamilyTigerPass;
 			productReference = B17B74C31BD399DE4838B652 /* FamilyTigerPass.app */;
 			productType = "com.apple.product-type.application";
+		};
+		B2D8E831DC8BEBD693C8B073 /* FamilyTigerPassTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 23F1CA653CE08FF5540631F0 /* Build configuration list for PBXNativeTarget "FamilyTigerPassTests" */;
+			buildPhases = (
+				B0F90D5723BFAA415BD0B175 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3B7E04CEEF7627ADC0E28077 /* PBXTargetDependency */,
+			);
+			name = FamilyTigerPassTests;
+			packageProductDependencies = (
+			);
+			productName = FamilyTigerPassTests;
+			productReference = EA96095E767C3A4C58B89F33 /* FamilyTigerPassTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -363,6 +545,11 @@
 						DevelopmentTeam = 33H8GRP43D;
 						ProvisioningStyle = Automatic;
 					};
+					B2D8E831DC8BEBD693C8B073 = {
+						DevelopmentTeam = 33H8GRP43D;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 71ECBA862E4543A227DE7193;
+					};
 				};
 			};
 			buildConfigurationList = A4DABC9632DE9280186BCD5C /* Build configuration list for PBXProject "FamilyTigerPass" */;
@@ -374,12 +561,16 @@
 			);
 			mainGroup = 801A0A30ECF4684C5B431DC0;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				5A4864CA065BB7C16B48AEE7 /* XCLocalSwiftPackageReference "Vendor/Alamofire" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 713C917486491DB0FA808433 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				71ECBA862E4543A227DE7193 /* FamilyTigerPass */,
+				B2D8E831DC8BEBD693C8B073 /* FamilyTigerPassTests */,
 				0A1F66F2AE8FA70B911B04B4 /* FamilyTigerPassUITests */,
 			);
 		};
@@ -410,6 +601,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				2DB6452A4DC3C9C16CB98BEB /* AppBackground.swift in Sources */,
+				758C6E7036CB75A341278593 /* AppClient.swift in Sources */,
+				B2179314B81A9A81B9403E90 /* AppConfig.swift in Sources */,
+				48EF09B4AA411B88104ECD29 /* AppCover.swift in Sources */,
+				D8AE9CC40A539D97EFEB1977 /* AppDependencies.swift in Sources */,
+				384AA1607395C8B11F30BA64 /* AppKeys.swift in Sources */,
+				9F6CCF0B99793805B8C07CCA /* AppLaunch.swift in Sources */,
+				8E244808D17248FB7D382C5E /* AppSession.swift in Sources */,
 				26C53B085FDE0D05814E9F08 /* AppTheme.swift in Sources */,
 				2C02A74552B453D6264E67AC /* BagDaysCalculator.swift in Sources */,
 				E10EAE3F5CABAD7BB0EEC45F /* BagDaysScreen.swift in Sources */,
@@ -421,16 +619,21 @@
 				B66F7EE3E28242D5580186F9 /* CalculatorKind.swift in Sources */,
 				27FB9C2806396235CD72301D /* CrateSizeCalculator.swift in Sources */,
 				A63AFBD80483B57188C8A3C3 /* CrateSizeScreen.swift in Sources */,
+				2DA63C22B6ECF766781A15D9 /* DeviceInfo.swift in Sources */,
 				1CB3935868387597EAB74712 /* ExportScreen.swift in Sources */,
 				DB37E9E327EE138E7B34AC8F /* FamilyTigerPassApp.swift in Sources */,
+				50156B6C0337E1A6B2C4DFC3 /* FamilyTigerPassCover.swift in Sources */,
 				48CB06EACDA2F33EF56F154F /* FormBits.swift in Sources */,
 				D5D4153BFF69FA9D32EF98A0 /* GlassBg.swift in Sources */,
 				4896510EBE6FA89BED678D68 /* HouseholdEnums.swift in Sources */,
 				6A9EC9118FC1FE900C7A558A /* KcalBandCalculator.swift in Sources */,
 				78BE617816197858013AB0A2 /* KcalBandScreen.swift in Sources */,
 				4E6C7249F13A91432CB6410D /* KeyboardChrome.swift in Sources */,
+				0549E2A9E9E4BFA252025B4F /* LaunchLoaderViews.swift in Sources */,
+				56847D462E93BB22ECBDC3A8 /* LaunchTier.swift in Sources */,
 				614395D51DB3108D62BA277E /* Legal.swift in Sources */,
 				6BA0ADFF7004AD9F8B402ECF /* LineItem.swift in Sources */,
+				3A2448F86B128DE734A2CF9C /* LoadResult.swift in Sources */,
 				5A6D7617CD29AFEF31511E2C /* MainTabView.swift in Sources */,
 				6F9E15B970B40FA4921D54B1 /* OnboardingScreen.swift in Sources */,
 				A1FC7270526C1E58F726AD32 /* PadLitterBurnCalculator.swift in Sources */,
@@ -448,7 +651,9 @@
 				A3E7F311C5692A69D06E2416 /* RootView.swift in Sources */,
 				64C0B223C56EB087ECAC52E7 /* SaveLineItemSheet.swift in Sources */,
 				21BF141E728C64D71607482F /* Seed.swift in Sources */,
+				BECB3C5934524184C21BAE19 /* SessionState.swift in Sources */,
 				03FDCC4012D4040FE5BB87B8 /* SettingsScreen.swift in Sources */,
+				F68FFBDDF2C59AE0A6163C6B /* Timeouts.swift in Sources */,
 				512745421EF00FDBFAA0B63C /* ToolsHubScreen.swift in Sources */,
 				C9CC06B3F61D383B0F890FF7 /* TravelKitCalculator.swift in Sources */,
 				750152E75BA49B2B4FC3694F /* TravelKitScreen.swift in Sources */,
@@ -458,12 +663,31 @@
 				9F04761995F83BCF2A614AA4 /* WalkWindowScreen.swift in Sources */,
 				527DBD66749486973459D651 /* WaterRefillCalculator.swift in Sources */,
 				A4214EFD4638DAB9BC4D0884 /* WaterRefillScreen.swift in Sources */,
+				2B0BD8B486269A5AC7118C0C /* WebViewController.swift in Sources */,
+				1EE094142F71923B16B088CF /* WebViewScreen.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B0F90D5723BFAA415BD0B175 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C2157A9783C8ACB9E7340FC5 /* AppCoverTests.swift in Sources */,
+				25599183A1BA5F032EE330D9 /* AppLaunchTests.swift in Sources */,
+				DDC0FF38E747B6941B4FA5F7 /* DecodePayloadTests.swift in Sources */,
+				FDF4994B0DE995C15A80A454 /* SessionStateTests.swift in Sources */,
+				858C9039886591EAE0A94BD7 /* WebViewURLTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		3B7E04CEEF7627ADC0E28077 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 71ECBA862E4543A227DE7193 /* FamilyTigerPass */;
+			targetProxy = 7DD485A540F03126EDA07B61 /* PBXContainerItemProxy */;
+		};
 		8FD59D1730934687B9686612 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 71ECBA862E4543A227DE7193 /* FamilyTigerPass */;
@@ -472,6 +696,29 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		1453AB03BC20C0CA207351BE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_ENTITLEMENTS = "";
+				DEVELOPMENT_TEAM = 33H8GRP43D;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.TuyetMaiDoThi.FamilyTigerPass.tests;
+				PRODUCT_MODULE_NAME = FamilyTigerPassTests;
+				PRODUCT_NAME = FamilyTigerPassTests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FamilyTigerPass.app/FamilyTigerPass";
+				TEST_TARGET_NAME = FamilyTigerPass;
+			};
+			name = Debug;
+		};
 		47471E3690AA8FDEF6685221 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -492,6 +739,29 @@
 				TEST_TARGET_NAME = FamilyTigerPass;
 			};
 			name = Debug;
+		};
+		48EDA272826070E205D4500B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_ENTITLEMENTS = "";
+				DEVELOPMENT_TEAM = 33H8GRP43D;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.TuyetMaiDoThi.FamilyTigerPass.tests;
+				PRODUCT_MODULE_NAME = FamilyTigerPassTests;
+				PRODUCT_NAME = FamilyTigerPassTests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FamilyTigerPass.app/FamilyTigerPass";
+				TEST_TARGET_NAME = FamilyTigerPass;
+			};
+			name = Release;
 		};
 		5B35AE54F7D70B7487A66DE9 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -528,7 +798,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEVELOPMENT_TEAM = 33H8GRP43D;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -550,7 +820,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FamilyTigerPass/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
-				MARKETING_VERSION = 1.0.0;
+				MARKETING_VERSION = 1.0.1;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -623,7 +893,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = 33H8GRP43D;
 				ENABLE_NS_ASSERTIONS = NO;
@@ -639,7 +909,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FamilyTigerPass/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
-				MARKETING_VERSION = 1.0.0;
+				MARKETING_VERSION = 1.0.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.TuyetMaiDoThi.FamilyTigerPass;
@@ -666,7 +936,6 @@
 				INFOPLIST_FILE = FamilyTigerPass/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Family Tiger Pass";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UIRequiresFullScreen = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -694,7 +963,6 @@
 				INFOPLIST_FILE = FamilyTigerPass/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Family Tiger Pass";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UIRequiresFullScreen = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -714,6 +982,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		23F1CA653CE08FF5540631F0 /* Build configuration list for PBXNativeTarget "FamilyTigerPassTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1453AB03BC20C0CA207351BE /* Debug */,
+				48EDA272826070E205D4500B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
 		A4DABC9632DE9280186BCD5C /* Build configuration list for PBXProject "FamilyTigerPass" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -742,6 +1019,20 @@
 			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		5A4864CA065BB7C16B48AEE7 /* XCLocalSwiftPackageReference "Vendor/Alamofire" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = Vendor/Alamofire;
+		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		935CC3CC9907859577AEC7B9 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 43BF58900FA04F23D41AD2CB /* Project object */;
 }

@@ -1,11 +1,5 @@
 import XCTest
 
-/// Chassis-agnostic 2.1 smoke: walks the app the way a reviewer does and captures the
-/// screenshots on the way. Navigation is discovered through the accessibility tree, so
-/// this file is the same for all 28 chassis — do not hand-tune it per app.
-///
-/// Run it through scripts/run-smoke.py: that uninstalls first, so the app always starts
-/// at onboarding with a virgin store.
 final class SmokeUITests: XCTestCase {
 
     private static let onboardingCTAs = [
@@ -17,6 +11,7 @@ final class SmokeUITests: XCTestCase {
     override func setUp() {
         continueAfterFailure = false
         app = XCUIApplication()
+        app.launchArguments.append("UI-Testing")
         app.launch()
     }
 
@@ -26,12 +21,11 @@ final class SmokeUITests: XCTestCase {
         let tabBar = app.tabBars.firstMatch
         XCTAssertTrue(
             tabBar.waitForExistence(timeout: 10),
-            "No tab bar after onboarding — the app never reaches its main surface (2.1)"
+            "No tab bar after onboarding"
         )
         let tabCount = tabBar.buttons.count
-        XCTAssertGreaterThanOrEqual(tabCount, 3, "Need ≥3 tabs on iOS 17 (4.2), found \(tabCount)")
+        XCTAssertGreaterThanOrEqual(tabCount, 3, "Expected at least three tabs, found \(tabCount)")
 
-        // Pass 1 captures the submission screenshots, pass 2 proves the loop survives a repeat.
         sweepTabs(capture: true)
         sweepTabs(capture: false)
 
@@ -43,8 +37,6 @@ final class SmokeUITests: XCTestCase {
 
     // MARK: - Steps
 
-    /// Driven by the onboarding CTA, never by the tab bar: a paged onboarding `TabView`
-    /// exposes its page indicator as a tab bar, which would look like the main surface.
     private func completeOnboarding() {
         XCTAssertTrue(app.wait(for: .runningForeground, timeout: 15), "App never reached the foreground")
         _ = app.staticTexts.firstMatch.waitForExistence(timeout: 10)
@@ -57,7 +49,7 @@ final class SmokeUITests: XCTestCase {
             settle(0.5)
         }
         if !app.tabBars.firstMatch.waitForExistence(timeout: 5) {
-            XCTFail("Onboarding never hands off to the main surface — dead end at first launch (2.1)")
+            XCTFail("Onboarding never hands off to the main screen")
         }
     }
 
@@ -76,7 +68,7 @@ final class SmokeUITests: XCTestCase {
             let density = app.staticTexts.count + app.cells.count + app.images.count
             XCTAssertGreaterThanOrEqual(
                 density, 3,
-                "Tab \(label) renders almost nothing — empty or dead tab (4.2)"
+                "Tab \(label) renders almost nothing"
             )
             if shouldCapture {
                 capture(named: label)
@@ -93,10 +85,8 @@ final class SmokeUITests: XCTestCase {
             let found = app.buttons.matching(match).firstMatch.exists
                 || app.links.matching(match).firstMatch.exists
                 || app.staticTexts.matching(match).firstMatch.exists
-            XCTAssertTrue(found, "Settings has no \(title) entry — required by 2.1 / 5.1.1")
+            XCTAssertTrue(found, "Settings has no \(title) entry")
         }
-        // No capture here: the tab sweep already shot this surface, and a duplicate
-        // would be rejected by the 2.3.3 gate.
     }
 
     private func checkDeleteAllData() {
@@ -104,12 +94,10 @@ final class SmokeUITests: XCTestCase {
         let delete = app.buttons.matching(
             NSPredicate(format: "label CONTAINS[c] %@", "Delete All")
         ).firstMatch
-        XCTAssertTrue(delete.waitForExistence(timeout: 5), "Settings offers no Delete All Data (2.1)")
+        XCTAssertTrue(delete.waitForExistence(timeout: 5), "Settings offers no Delete All Data")
         delete.tap()
         confirmDestructiveAction()
 
-        // Onboarding is back when the tab bar is gone or a first-run CTA is on screen.
-        // Wait through the run loop: a busy loop here gets the runner killed as unresponsive.
         let tabBarGone = expectation(
             for: NSPredicate(format: "exists == false"),
             evaluatedWith: app.tabBars.firstMatch
@@ -119,14 +107,13 @@ final class SmokeUITests: XCTestCase {
             capture(named: "delete-failed")
             let visible = app.buttons.allElementsBoundByIndex.prefix(12).map(\.label)
             XCTFail(
-                "Delete All Data did not return to onboarding — the completion flag survived the wipe (2.1). "
+                "Delete All Data did not return to onboarding. "
                     + "Visible buttons: \(visible)"
             )
         }
         XCTAssertEqual(app.state, .runningForeground, "App crashed on Delete All Data")
     }
 
-    /// Confirmation can arrive as an action sheet, an alert, or not at all — accept all three.
     private func confirmDestructiveAction() {
         var dialog: XCUIElement?
         if app.sheets.firstMatch.waitForExistence(timeout: 3) {
@@ -168,7 +155,6 @@ final class SmokeUITests: XCTestCase {
         return hittable.count == 1 ? hittable[0] : nil
     }
 
-    /// Run-loop friendly pause. A busy wait here gets the runner killed as unresponsive.
     private func settle(_ seconds: TimeInterval = 1.2) {
         _ = XCTWaiter().wait(for: [XCTestExpectation(description: "settle")], timeout: seconds)
     }

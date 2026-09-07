@@ -23,3 +23,6 @@ AuthKey_*.p8
 OUTPUTS/
 *.log
 .wrangler/
+edge/
+GoogleService-Info.plist
+**/GoogleService-Info.plist

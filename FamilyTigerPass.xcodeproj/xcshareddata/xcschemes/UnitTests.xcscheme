@@ -29,9 +29,9 @@
             buildForAnalyzing = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "0A1F66F2AE8FA70B911B04B4"
-               BuildableName = "FamilyTigerPassUITests.xctest"
-               BlueprintName = "FamilyTigerPassUITests"
+               BlueprintIdentifier = "B2D8E831DC8BEBD693C8B073"
+               BuildableName = "FamilyTigerPassTests.xctest"
+               BlueprintName = "FamilyTigerPassTests"
                ReferencedContainer = "container:FamilyTigerPass.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -41,7 +41,7 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      shouldUseLaunchSchemeArgsEnv = "NO"
+      shouldUseLaunchSchemeArgsEnv = "YES"
       onlyGenerateCoverageForSpecifiedTargets = "NO">
       <MacroExpansion>
          <BuildableReference
@@ -58,18 +58,14 @@
             parallelizable = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "0A1F66F2AE8FA70B911B04B4"
-               BuildableName = "FamilyTigerPassUITests.xctest"
-               BlueprintName = "FamilyTigerPassUITests"
+               BlueprintIdentifier = "B2D8E831DC8BEBD693C8B073"
+               BuildableName = "FamilyTigerPassTests.xctest"
+               BlueprintName = "FamilyTigerPassTests"
                ReferencedContainer = "container:FamilyTigerPass.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
       <CommandLineArguments>
-         <CommandLineArgument
-            argument = "UI-Testing"
-            isEnabled = "YES">
-         </CommandLineArgument>
       </CommandLineArguments>
    </TestAction>
    <LaunchAction

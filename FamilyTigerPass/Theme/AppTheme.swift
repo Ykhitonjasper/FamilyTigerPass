@@ -3,6 +3,7 @@ import SwiftUI
 enum AppTheme {
     static let accent = Color("AccentColor")
     static let bgBase = Color("BgBase")
+    static let backgroundGlow = Color("AccentColor").opacity(0.28)
     static let bgElevated = Color("BgElevated")
     static let textPrimary = Color("TextPrimary")
     static let textSecondary = Color("TextSecondary")
